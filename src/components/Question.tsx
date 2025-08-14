@@ -14,9 +14,7 @@ export interface QuestionType {
   answer: string;
 }
 
-interface QuestionProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-  QuestionType { }
+type QuestionProps = React.HTMLAttributes<HTMLDivElement> & QuestionType;
 
 const Question: React.FC<QuestionProps> = ({ question, answer }) => {
   return (
@@ -24,7 +22,7 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
       <Disclosure as="div" className="border-b border-gray-400 py-2">
         {({ open }) => (
           <>
-            <DisclosureButton className="hover:bg-opacity-5 focus-visible:ring-opacity-75 flex w-full justify-between rounded-lg py-2 px-4 text-left text-lg font-medium text-[#ca823a] hover:bg-[#f4e79e] focus:outline-none focus-visible:ring focus-visible:ring-white lg:py-5 lg:text-2xl cursor-pointer">
+            <DisclosureButton className="hover:bg-opacity-5 focus-visible:ring-opacity-75 text-secondary hover:bg-background-hover flex w-full cursor-pointer justify-between rounded-lg px-4 py-2 text-left text-lg font-medium focus:outline-none focus-visible:ring focus-visible:ring-white lg:py-5 lg:text-2xl">
               {question}
               <span>
                 <ChevronUpIcon
@@ -40,7 +38,7 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
               leaveFrom="transform scale-100 opacity-100 max-h-96"
               leaveTo="transform scale-95 opacity-0 max-h-0"
             >
-              <DisclosurePanel className="w-full px-4 text-[#ca823a]">
+              <DisclosurePanel className="text-secondary w-full px-4">
                 {answer}
               </DisclosurePanel>
             </Transition>
