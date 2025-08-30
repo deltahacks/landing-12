@@ -41,9 +41,9 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="relative w-full overflow-hidden py-12">
+      <div className="relative w-full overflow-hidden pb-12">
         {hoveredIdx !== null && members[hoveredIdx] && (
-          <div className="absolute top-8/12 left-2/5 text-center text-xs font-semibold">
+          <div className="absolute bottom-2/12 left-1/2 z-10 -translate-x-1/2 text-center text-xs font-semibold">
             {members[hoveredIdx].full_name}, {members[hoveredIdx].team}{" "}
             {members[hoveredIdx].emoji}
           </div>
@@ -56,7 +56,7 @@ export default function Carousel() {
           onPointerCancel={handleCarouselResume}
           onPointerLeave={handleCarouselResume}
         >
-          <div className="flex items-center gap-6 p-6">
+          <div className="flex items-center gap-10 p-10">
             {members.map((member, idx) => (
               <div
                 key={idx}
@@ -71,6 +71,7 @@ export default function Carousel() {
                       : "/memberPictures/placeholder.png"
                   }
                   fullName={member.full_name}
+                  index={idx}
                   isActive={hoveredIdx === idx}
                 />
               </div>
