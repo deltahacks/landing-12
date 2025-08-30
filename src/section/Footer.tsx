@@ -4,7 +4,7 @@ import { Separator } from "~/components/ui/separator";
 export default function Footer() {
   return (
     <div className="flex flex-col items-center justify-center bg-[#FFF7E3] py-10 text-[#766060]">
-      <p className="text-md text-center text-sm font-medium">
+      <p className="text-center text-sm font-medium">
         Made with ❤️ from the DeltaHacks Team
       </p>
       <Carousel />
