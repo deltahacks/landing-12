@@ -30,6 +30,16 @@ export default function HomePage() {
               deploy it.
             </div>
           </Link>
+          {/* Add this block for the About page */}
+          <Link
+            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+            href="/about"
+          >
+            <h3 className="text-2xl font-bold">About →</h3>
+            <div className="text-lg">
+              Learn more about this project and the team behind it.
+            </div>
+          </Link>
         </div>
       </div>
     </main>
