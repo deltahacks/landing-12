@@ -12,8 +12,8 @@ type QuestionProps = React.HTMLAttributes<HTMLDivElement> & QuestionType;
 
 const Question: React.FC<QuestionProps> = ({ question, answer }) => {
   return (
-    <div className="w-full">
-      <details className="group border-b border-gray-400 py-2">
+    <div className="w-full border-b border-gray-400">
+      <details className="group py-2">
         <summary className="hover:bg-opacity-5 focus-visible:ring-opacity-75 text-secondary hover:bg-background-hover flex w-full cursor-pointer list-none justify-between rounded-lg px-4 py-2 text-left text-lg font-medium focus:outline-none focus-visible:ring focus-visible:ring-white lg:py-5 lg:text-2xl">
           {question}
           <span>
