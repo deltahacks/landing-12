@@ -18,7 +18,7 @@ const aboutUsInfo: AboutUsInfoType[] = [
         viewBox="0 0 156 166"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-auto w-40 md:w-32 -mr-8 md:-mr-0"
+        className="-mr-8 h-auto w-40 md:-mr-0 md:w-32"
       >
         <ellipse
           cx="79.533"
@@ -84,7 +84,7 @@ const aboutUsInfo: AboutUsInfoType[] = [
         viewBox="0 0 167 172"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-auto w-40 md:w-32 -mr-10 md:-mr-0"
+        className="-mr-10 h-auto w-40 md:-mr-0 md:w-32"
       >
         <ellipse
           cx="81.766"
@@ -154,14 +154,14 @@ const aboutUsInfo: AboutUsInfoType[] = [
     description:
       "With McMaster University, we welcome hackers from beginners to experts. Our team works year-round to create an inclusive, supportive space.",
     icon: (
-       <svg
-         width="174"
-         height="167"
-         viewBox="0 0 174 167"
-         fill="none"
-         xmlns="http://www.w3.org/2000/svg"
-        className="h-auto w-40 md:w-32 -mr-10 md:-mr-0"
-       >
+      <svg
+        width="174"
+        height="167"
+        viewBox="0 0 174 167"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="-mr-10 h-auto w-40 md:-mr-0 md:w-32"
+      >
         <path
           d="m82.29 46.383-.798.662a5.327 5.327 0 0 1-8.388-2.224l-2.9-7.714a14.8 14.8 0 0 0-2.5-4.288l-6.537-7.83a5.239 5.239 0 1 1 8.17-6.554L83.375 36.65a7.053 7.053 0 0 1-1.084 9.733"
           fill="#784410"
@@ -243,9 +243,9 @@ const aboutUsInfo: AboutUsInfoType[] = [
         height="192"
         viewBox="0 0 181 192"
         fill="none"
-         xmlns="http://www.w3.org/2000/svg"
-        className="h-auto w-40 md:w-32 -mr-10 md:-mr-0"
-       >
+        xmlns="http://www.w3.org/2000/svg"
+        className="-mr-10 h-auto w-40 md:-mr-0 md:w-32"
+      >
         <path
           d="m118.344 43.693.753 1.007 1.234-.243 26.556-5.233-.109 25.95-.006 1.318 1.208.525 24.652 10.714-15.93 20.791-.825 1.077.695 1.164 13.421 22.494-25.726 7.793-1.261.382-.146 1.309-2.89 25.788-25.774-8.266-1.197-.385-.865.915-18.217 19.24-15.87-21.217-.754-1.008-1.234.243-26.557 5.233.111-25.949.005-1.318-1.208-.525-24.652-10.714 15.931-20.792.825-1.076-.695-1.165-13.422-22.493 25.726-7.793 1.26-.382.148-1.31 2.888-25.789 25.775 8.268 1.197.384.866-.913 18.216-19.242z"
           fill="#FFD13B"
