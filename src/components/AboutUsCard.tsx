@@ -9,7 +9,7 @@ const AboutUsCard: React.FC<AboutUsInfoType> = ({
   return (
     <div className="border-dh-border flex flex-row items-center border-4 p-4">
       <div className="flex-1">
-        <h3 className="text-2xl font-semibold md:text-2xl">{title}</h3>
+        <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="md:text-lg">{description}</p>
       </div>
       <div className="flex-shrink-0">{icon}</div>
