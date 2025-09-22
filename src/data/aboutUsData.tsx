@@ -4,7 +4,7 @@ export type AboutUsInfoType = {
   title: string;
   description: string;
   icon: React.ReactNode;
-}
+};
 
 const aboutUsInfo: AboutUsInfoType[] = [
   {
