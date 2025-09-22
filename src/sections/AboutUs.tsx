@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FeatureCard from "../components/AboutUsCard";
+import AboutUsCard from "../components/AboutUsCard";
 import aboutUsInfo from "../data/aboutUsData";
 
 const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
@@ -63,9 +63,9 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
             />
           </svg>
         </div>
-        <div className="text-dh-gold grid grid-cols-1 gap-4 p-4 md:grid-cols-2 md:gap-8 md:p-8">
+        <div className="text-dh-gold grid grid-cols-1 gap-2 p-4 md:grid-cols-2">
           {aboutUsInfo.map((info, index) => (
-            <FeatureCard
+            <AboutUsCard
               key={index}
               title={info.title}
               description={info.description}
