@@ -6,57 +6,97 @@ export type CarouselItemProps = {
   fullName: string;
   isActive?: boolean;
   index: number;
+  pfpSize?: number;
 };
 
 export default function CarouselItem({
   src,
   fullName,
   index,
+  pfpSize = 60,
 }: CarouselItemProps) {
-  // tomato, cheese, lettuce, tomato, cheese, letus...`
-  const image =
-    index % 3 === 0
-      ? "tomato.png"
-      : index % 3 === 1
-        ? "cheese.png"
-        : "lettuce.png";
-  const scaleClass =
-    index % 3 === 0
-      ? "scale-[2.4]"
-      : index % 3 === 1
-        ? "scale-[2.9]"
-        : "scale-[2.8]";
-  const translateClass =
-    index % 3 === 0
-      ? "-translate-x-[2px] translate-y-[1px]"
-      : index % 3 === 1
-        ? "-translate-x-[4px] -translate-y-[3px]"
-        : "translate-y-[5px]";
-  const pfpSizePx = 60;
+  const components = [
+    TomatoComponent,
+    CheeseComponent,
+    LettuceComponent,
+  ] as const;
+  const BackgroundComponent = components[index % 3]!;
+
   return (
-    <div className="relative h-[60px] w-[60px]">
+    <div className={`relative h-[${pfpSize}px] w-[${pfpSize}px]`}>
       <div className="absolute inset-0">
-        <Image
-          src={`/carousel/${image}`}
-          alt={image}
-          fill
-          sizes={`${pfpSizePx * (index % 3 === 0 ? 2.4 : index % 3 === 1 ? 2.9 : 2.8)}px`} // 60px * scale
-          className={cn(
-            "origin-center object-contain select-none",
-            scaleClass,
-            translateClass,
-          )}
-          priority={false}
-        />
+        <BackgroundComponent pfpSize={pfpSize} />
         <Image
           src={src}
           alt={fullName}
           fill
-          sizes={`${pfpSizePx}px`}
+          sizes={`${pfpSize}px`}
           className="rounded-full object-cover"
           priority={false}
         />
       </div>
     </div>
+  );
+}
+
+function TomatoComponent({ pfpSize }: { pfpSize: number }) {
+  const scale = 2.4;
+  const translateX = -2;
+  const translateY = 1;
+  const bgSize = pfpSize * scale;
+  return (
+    <Image
+      src="/carousel/tomato.png"
+      alt="tomato"
+      fill
+      sizes={`${bgSize}px`}
+      className={cn(
+        "origin-center object-contain select-none",
+        `scale-[${scale}]`,
+        `-translate-x-[${Math.abs(translateX)}px] translate-y-[${translateY}px]`,
+      )}
+      priority={false}
+    />
+  );
+}
+
+function CheeseComponent({ pfpSize }: { pfpSize: number }) {
+  const scale = 2.9;
+  const translateX = -4;
+  const translateY = -3;
+  const bgSize = pfpSize * scale;
+  return (
+    <Image
+      src="/carousel/cheese.png"
+      alt="cheese"
+      fill
+      sizes={`${bgSize}px`}
+      className={cn(
+        "origin-center object-contain select-none",
+        `scale-[${scale}]`,
+        `-translate-x-[${Math.abs(translateX)}px] -translate-y-[${Math.abs(translateY)}px]`,
+      )}
+      priority={false}
+    />
+  );
+}
+
+function LettuceComponent({ pfpSize }: { pfpSize: number }) {
+  const scale = 2.8;
+  const translateY = 5;
+  const bgSize = pfpSize * scale;
+  return (
+    <Image
+      src="/carousel/lettuce.png"
+      alt="lettuce"
+      fill
+      sizes={`${bgSize}px`}
+      className={cn(
+        "origin-center object-contain select-none",
+        `scale-[${scale}]`,
+        `translate-y-[${translateY}px]`,
+      )}
+      priority={false}
+    />
   );
 }
