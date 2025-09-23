@@ -60,7 +60,7 @@ export default function Carousel() {
                       ? `/memberPictures/${member.fileName}`
                       : "/memberPictures/placeholder.png"
                   }
-                  fullName={(member.fullName ?? "") as string}
+                  fullName={member.fullName ?? ""}
                   index={idx}
                   isActive={hoveredIdx === idx}
                 />

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn, type StyleWithVars } from "~/lib/utils";
+import { type StyleWithVars } from "~/lib/utils";
 
 export type CarouselItemProps = {
   src: string;
@@ -21,8 +21,12 @@ export default function CarouselItem({
     LettuceComponent,
   ] as const;
   const BackgroundComponent = components[index % 3]!;
+  const wrapperStyle: StyleWithVars<"--w" | "--h"> = {
+    "--w": `${pfpSize}px`,
+    "--h": `${pfpSize}px`,
+  };
   return (
-    <div className={cn("relative", `h-[${pfpSize}px] w-[${pfpSize}px]`)}>
+    <div className="relative h-[var(--h)] w-[var(--w)]" style={wrapperStyle}>
       <BackgroundComponent pfpSize={pfpSize} />
       <Image
         src={src}
@@ -85,7 +89,7 @@ function CheeseComponent({ pfpSize }: { pfpSize: number }) {
         alt="cheese"
         fill
         sizes={`${bgSize}px`}
-        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] scale-[var(--s)] object-contain select-none"
+        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] object-contain select-none"
         style={imgStyle}
         priority={false}
       />
@@ -113,7 +117,7 @@ function LettuceComponent({ pfpSize }: { pfpSize: number }) {
         alt="lettuce"
         fill
         sizes={`${bgSize}px`}
-        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] scale-[var(--s)] object-contain select-none"
+        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] object-contain select-none"
         style={imgStyle}
         priority={false}
       />
