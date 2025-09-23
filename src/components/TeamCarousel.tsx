@@ -51,7 +51,6 @@ export default function Carousel() {
             {members.map((member, idx) => (
               <div
                 key={idx}
-                className="shrink-0"
                 onMouseEnter={() => handleImageActive(idx)}
                 onMouseLeave={handleImageInactive}
               >
