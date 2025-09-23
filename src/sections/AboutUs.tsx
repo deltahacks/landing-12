@@ -15,11 +15,11 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
       >
         <div className="border-dh-border mt-4 flex w-full flex-col items-center border-t-4 md:border-y-4">
           <div className="translate-y-8 transform">
-            <div className="-mt-24 flex translate-y-16 transform flex-col items-center">
+            <div className="-mt-16 flex translate-y-9 transform flex-col items-center md:-mt-24 md:translate-y-16">
               <h1 className="font-funky text-dh-blue py-3 text-5xl md:text-8xl">
                 DINO-MART
               </h1>
-              <div className="text-dh-blue flex flex-row items-center justify-center gap-24 text-2xl font-semibold md:gap-32 md:text-4xl">
+              <div className="text-dh-blue flex -translate-x-1 transform flex-row items-center justify-center gap-24 text-2xl font-semibold opacity-65 md:gap-40 md:text-4xl">
                 <h2>About</h2>
                 <h2>DH12!</h2>
               </div>
