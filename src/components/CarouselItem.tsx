@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "~/lib/utils";
 
 export type CarouselItemProps = {
   src: string;
@@ -12,15 +13,26 @@ export default function CarouselItem({
   fullName,
   index,
 }: CarouselItemProps) {
-  const scale = index % 3 === 0 ? 240 : index % 3 === 1 ? 290 : 280;
-  const translateX = index % 3 === 0 ? -2 : index % 3 === 1 ? -4 : 0;
-  const translateY = index % 3 === 0 ? 1 : index % 3 === 1 ? -3 : 5;
+  // tomato, cheese, lettuce, tomato, cheese, letus...`
   const image =
     index % 3 === 0
       ? "tomato.png"
       : index % 3 === 1
         ? "cheese.png"
         : "lettuce.png";
+  const scaleClass =
+    index % 3 === 0
+      ? "scale-[2.4]"
+      : index % 3 === 1
+        ? "scale-[2.9]"
+        : "scale-[2.8]";
+  const translateClass =
+    index % 3 === 0
+      ? "-translate-x-[2px] translate-y-[1px]"
+      : index % 3 === 1
+        ? "-translate-x-[4px] -translate-y-[3px]"
+        : "translate-y-[5px]";
+  const pfpSizePx = 60;
   return (
     <div className="relative h-[60px] w-[60px]">
       <div className="absolute inset-0">
@@ -28,18 +40,19 @@ export default function CarouselItem({
           src={`/carousel/${image}`}
           alt={image}
           fill
-          style={{
-            transform: `scale(${scale / 100})`,
-            transformOrigin: "center",
-            translate: `${translateX}px ${translateY}px`,
-          }}
-          className="object-contain select-none"
+          sizes={`${pfpSizePx * (index % 3 === 0 ? 2.4 : index % 3 === 1 ? 2.9 : 2.8)}px`} // 60px * scale
+          className={cn(
+            "origin-center object-contain select-none",
+            scaleClass,
+            translateClass,
+          )}
           priority={false}
         />
         <Image
           src={src}
           alt={fullName}
           fill
+          sizes={`${pfpSizePx}px`}
           className="rounded-full object-cover"
           priority={false}
         />
