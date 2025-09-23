@@ -26,14 +26,9 @@ export default function Carousel() {
     emblaApi?.plugins().autoScroll.play();
   }, [emblaApi]);
 
-  const handleImageActive = useCallback(
-    (idx: number) => {
-      setHoveredIdx(idx);
-      const member = members[idx];
-      console.log("hovering on", member);
-    },
-    [members],
-  );
+  const handleImageActive = useCallback((idx: number) => {
+    setHoveredIdx(idx);
+  }, []);
 
   const handleImageInactive = useCallback(() => {
     setHoveredIdx(null);
