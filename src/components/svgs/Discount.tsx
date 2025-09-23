@@ -1,5 +1,5 @@
-import * as React from "react"
-import type { SVGProps } from "react"
+import * as React from "react";
+import type { SVGProps } from "react";
 const Discount: React.FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width={181}
@@ -20,5 +20,5 @@ const Discount: React.FC<SVGProps<SVGSVGElement>> = (props) => (
       fill="#FF9407"
     />
   </svg>
-)
-export default Discount
+);
+export default Discount;

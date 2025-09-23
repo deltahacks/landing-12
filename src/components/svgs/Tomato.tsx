@@ -1,5 +1,5 @@
-import * as React from "react"
-import type { SVGProps } from "react"
+import * as React from "react";
+import type { SVGProps } from "react";
 const Tomato: React.FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width={156}
@@ -60,5 +60,5 @@ const Tomato: React.FC<SVGProps<SVGSVGElement>> = (props) => (
       strokeLinecap="round"
     />
   </svg>
-)
-export default Tomato
+);
+export default Tomato;

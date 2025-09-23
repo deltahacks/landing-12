@@ -1,5 +1,5 @@
-import * as React from "react"
-import type { SVGProps } from "react"
+import * as React from "react";
+import type { SVGProps } from "react";
 const LeftWave: React.FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width={234}
@@ -16,5 +16,5 @@ const LeftWave: React.FC<SVGProps<SVGSVGElement>> = (props) => (
       strokeLinecap="round"
     />
   </svg>
-)
-export default LeftWave
+);
+export default LeftWave;

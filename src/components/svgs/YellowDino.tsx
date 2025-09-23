@@ -1,5 +1,5 @@
-import * as React from "react"
-import type { SVGProps } from "react"
+import * as React from "react";
+import type { SVGProps } from "react";
 const YellowDino: React.FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -215,5 +215,5 @@ const YellowDino: React.FC<SVGProps<SVGSVGElement>> = (props) => (
       </filter>
     </defs>
   </svg>
-)
-export default YellowDino
+);
+export default YellowDino;

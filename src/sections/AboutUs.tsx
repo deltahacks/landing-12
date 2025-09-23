@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { clsx } from "clsx";
 import AboutUsCard from "~/components/AboutUsCard";
 import aboutUsInfo from "~/data/aboutUsData";
 import LeftWave from "~/components/svgs/LeftWave";
@@ -10,7 +11,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   return (
     <div
-      className={`md:flex md:items-center md:justify-center ${className ?? ""}`}
+      className={clsx("md:flex md:items-center md:justify-center", className)}
     >
       <div
         className={`md:border-dh-border relative flex h-full w-full flex-col items-center justify-center overflow-hidden md:max-w-4xl md:rounded-lg md:border-4`}
