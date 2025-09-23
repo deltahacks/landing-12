@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import AboutUsCard from "../components/AboutUsCard";
-import aboutUsInfo from "../data/aboutUsData";
+import AboutUsCard from "~/components/AboutUsCard";
+import aboutUsInfo from "~/data/aboutUsData";
 
 const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,

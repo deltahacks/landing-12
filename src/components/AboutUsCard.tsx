@@ -1,5 +1,5 @@
 import React from "react";
-import type { AboutUsInfoType } from "../data/aboutUsData.tsx";
+import type { AboutUsInfoType } from "~/data/aboutUsData.tsx";
 
 const AboutUsCard: React.FC<AboutUsInfoType> = ({
   title,
