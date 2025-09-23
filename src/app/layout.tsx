@@ -17,7 +17,7 @@ const fredoka = Fredoka({
 const darumadropOne = Darumadrop_One({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-funky",
+  variable: "--font-darumdrop",
 });
 
 export default function RootLayout({

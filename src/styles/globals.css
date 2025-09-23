@@ -3,7 +3,7 @@
 @theme {
   --font-sans: var(--font-fredoka), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-funky: var(--font-funky), cursive;
+  --font-darumdrop: var(--font-darumdrop), cursive;
   --font-fredoka: var(--font-fredoka), sans-serif;
 
   --color-secondary: #ca823a;
