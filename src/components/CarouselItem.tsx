@@ -14,8 +14,8 @@ export default function CarouselItem({ src, isActive, fullName }: CarouselItemPr
       <Image
         src={src}
         alt={fullName}
-        width={64}
-        height={64}
+        width={71.776}
+        height={66.877}
         className="h-24 w-24 rounded-full object-cover md:h-28 md:w-28"
         priority={false}
       />

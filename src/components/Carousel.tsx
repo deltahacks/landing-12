@@ -40,42 +40,44 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden py-12">
-      {hoveredIdx && members[hoveredIdx] && (
-        <div className="absolute top-8/12 left-2/5 text-center font-semibold text-xs">
-          {members[hoveredIdx].full_name}, {members[hoveredIdx].team}{" "}
-          {members[hoveredIdx].emoji}
-        </div>
-      )}
-      <div
-        ref={emblaRef}
-        className=""
-        onPointerDown={handleCarouselStop}
-        onPointerUp={handleCarouselResume}
-        onPointerCancel={handleCarouselResume}
-        onPointerLeave={handleCarouselResume}
-      >
-        <div className="flex items-center gap-6 p-6">
-          {members.map((member, idx) => (
-            <div
-              key={idx}
-              className="shrink-0"
-              onMouseEnter={() => handleImageActive(idx)}
-              onMouseLeave={handleImageInactive}
-            >
-              <CarouselItem
-                src={
-                  member.filename
-                    ? `/memberPictures/${member.filename}`
-                    : "/memberPictures/placeholder.png"
-                }
-                fullName={member.full_name}
-                isActive={hoveredIdx === idx}
-              />
-            </div>
-          ))}
+    <>
+      <div className="relative w-full overflow-hidden py-12">
+        {hoveredIdx !== null && members[hoveredIdx] && (
+          <div className="absolute top-8/12 left-2/5 text-center text-xs font-semibold">
+            {members[hoveredIdx].full_name}, {members[hoveredIdx].team}{" "}
+            {members[hoveredIdx].emoji}
+          </div>
+        )}
+        <div
+          ref={emblaRef}
+          className="[mask-image:linear-gradient(to_right,transparent,black_6%,black_93%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_93%,transparent)]"
+          onPointerDown={handleCarouselStop}
+          onPointerUp={handleCarouselResume}
+          onPointerCancel={handleCarouselResume}
+          onPointerLeave={handleCarouselResume}
+        >
+          <div className="flex items-center gap-6 p-6">
+            {members.map((member, idx) => (
+              <div
+                key={idx}
+                className="shrink-0"
+                onMouseEnter={() => handleImageActive(idx)}
+                onMouseLeave={handleImageInactive}
+              >
+                <CarouselItem
+                  src={
+                    member.filename
+                      ? `/memberPictures/${member.filename}`
+                      : "/memberPictures/placeholder.png"
+                  }
+                  fullName={member.full_name}
+                  isActive={hoveredIdx === idx}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
