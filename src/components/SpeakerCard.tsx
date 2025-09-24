@@ -10,7 +10,7 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
 }) => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="aspect-square bg-gray-300 rounded-2xl overflow-hidden shadow-lg">
+      <div className="aspect-square bg-gray-300 rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-110">
         <Image
           src={imagePath}
           alt={name}
