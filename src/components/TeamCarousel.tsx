@@ -36,7 +36,7 @@ export default function Carousel() {
     <>
       <div className="relative w-full overflow-hidden pb-12">
         {hoveredIdx !== null && members[hoveredIdx] && (
-          <div className="absolute bottom-2/12 left-1/2 z-10 -translate-x-1/2 text-center text-xs font-semibold">
+          <div className="absolute bottom-2/12 left-1/2 -translate-x-1/2 text-center text-xs font-semibold">
             {members[hoveredIdx].fullName}, {members[hoveredIdx].team}{" "}
             {members[hoveredIdx].emoji}
           </div>
@@ -47,7 +47,7 @@ export default function Carousel() {
           onPointerDown={handleCarouselStop}
           onPointerLeave={handleCarouselResume}
         >
-          <div className="flex items-center gap-11 p-10">
+          <div className="flex items-center gap-5 py-10">
             {members.map((member, idx) => (
               <div
                 key={idx}

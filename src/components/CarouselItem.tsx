@@ -1,126 +1,77 @@
 import Image from "next/image";
-import { type StyleWithVars } from "~/lib/utils";
 
 export type CarouselItemProps = {
   src: string;
   fullName: string;
   isActive?: boolean;
   index: number;
-  pfpSize?: number;
 };
 
 export default function CarouselItem({
   src,
   fullName,
   index,
-  pfpSize = 60,
 }: CarouselItemProps) {
   const components = [
     TomatoComponent,
     CheeseComponent,
     LettuceComponent,
   ] as const;
-  const BackgroundComponent = components[index % 3]!;
-  const wrapperStyle: StyleWithVars<"--w" | "--h"> = {
-    "--w": `${pfpSize}px`,
-    "--h": `${pfpSize}px`,
-  };
+
+  const BackgroundComponent = components[index % components.length]!;
+
   return (
-    <div className="relative h-[var(--h)] w-[var(--w)]" style={wrapperStyle}>
-      <BackgroundComponent pfpSize={pfpSize} />
-      <Image
-        src={src}
-        alt={fullName}
-        fill
-        className="rounded-full object-cover"
-        priority={false}
-      />
+    <div className="grid size-24 grid-cols-1 grid-rows-1">
+      <div className="z-10 aspect-square p-4.5">
+        <Image
+          src={src}
+          alt={fullName}
+          width={256}
+          height={256}
+          className="aspect-square rounded-full object-cover"
+          priority={false}
+        />
+      </div>
+      <BackgroundComponent />
     </div>
   );
 }
 
-function TomatoComponent({ pfpSize }: { pfpSize: number }) {
-  const scale = 2.4;
-  const bgSize = pfpSize * scale;
-  const translateX = -45;
-  const translateY = 2;
-  const wrapperStyle: StyleWithVars<"--bg"> = { "--bg": `${bgSize}px` };
-  const imgStyle: StyleWithVars<"--tx" | "--ty"> = {
-    "--tx": `${translateX}px`,
-    "--ty": `${translateY}px`,
-  };
-
+function TomatoComponent() {
   return (
-    <div
-      className={"absolute inset-0 m-auto h-[var(--bg)] w-[var(--bg)]"}
-      style={wrapperStyle}
-    >
-      <Image
-        src="/carousel/tomato.png"
-        alt="tomato"
-        fill
-        className={
-          "translate-x-[var(--tx)] translate-y-[var(--ty)] object-contain select-none"
-        }
-        style={imgStyle}
-        priority={false}
-      />
-    </div>
+    <Image
+      src="/carousel/tomato.png"
+      alt="tomato"
+      width={255}
+      height={255}
+      className="scale-[150%] object-contain select-none"
+      priority={false}
+    />
   );
 }
 
-function CheeseComponent({ pfpSize }: { pfpSize: number }) {
-  const scale = 2.9;
-  const bgSize = pfpSize * scale;
-  const translateX = -60;
-  const translateY = -3;
-  const wrapperStyle: StyleWithVars<"--bg"> = { "--bg": `${bgSize}px` };
-  const imgStyle: StyleWithVars<"--tx" | "--ty"> = {
-    "--tx": `${translateX}px`,
-    "--ty": `${translateY}px`,
-  };
+function CheeseComponent() {
   return (
-    <div
-      className="absolute inset-0 m-auto h-[var(--bg)] w-[var(--bg)]"
-      style={wrapperStyle}
-    >
-      <Image
-        src="/carousel/cheese.png"
-        alt="cheese"
-        fill
-        sizes={`${bgSize}px`}
-        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] object-contain select-none"
-        style={imgStyle}
-        priority={false}
-      />
-    </div>
+    <Image
+      src="/carousel/cheese.png"
+      alt="cheese"
+      width={255}
+      height={255}
+      className="origin-[55_58%] scale-175 object-contain select-none"
+      priority={false}
+    />
   );
 }
 
-function LettuceComponent({ pfpSize }: { pfpSize: number }) {
-  const scale = 2.8;
-  const translateX = -55;
-  const translateY = 5;
-  const bgSize = pfpSize * scale;
-  const wrapperStyle: StyleWithVars<"--bg"> = { "--bg": `${bgSize}px` };
-  const imgStyle: StyleWithVars<"--tx" | "--ty"> = {
-    "--tx": `${translateX}px`,
-    "--ty": `${translateY}px`,
-  };
+function LettuceComponent() {
   return (
-    <div
-      className="absolute inset-0 m-auto h-[var(--bg)] w-[var(--bg)]"
-      style={wrapperStyle}
-    >
-      <Image
-        src="/carousel/lettuce.png"
-        alt="lettuce"
-        fill
-        sizes={`${bgSize}px`}
-        className="origin-center translate-x-[var(--tx)] translate-y-[var(--ty)] object-contain select-none"
-        style={imgStyle}
-        priority={false}
-      />
-    </div>
+    <Image
+      src="/carousel/lettuce.png"
+      alt="lettuce"
+      width={255}
+      height={255}
+      className="origin-center scale-175 object-contain select-none"
+      priority={false}
+    />
   );
 }
