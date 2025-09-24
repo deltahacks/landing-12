@@ -15,10 +15,10 @@ const Speakers: React.FC = () => {
           </span>{" "}
           leaders
         </h1>
-        <p className="text-sm font-medium text-white md:text-2xl text-balance">
+        <p className="text-sm font-medium text-balance text-white md:text-2xl">
           DeltaHacks is your chance to learn directly from leading figures in
-          tech.Here are just a few of the past keynote speakers we&apos;ve invited to
-          speak:
+          tech.Here are just a few of the past keynote speakers we&apos;ve
+          invited to speak:
         </p>
         <div className="mt-8 grid grid-cols-2 gap-8 px-4 md:grid-cols-4">
           {speakersInfo.map((speaker) => (

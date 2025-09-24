@@ -1,6 +1,8 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SpeakerBackgroundTopBorder: React.FC<SVGProps<SVGSVGElement>> = (props) => (
+const SpeakerBackgroundTopBorder: React.FC<SVGProps<SVGSVGElement>> = (
+  props,
+) => (
   <svg
     width={1440}
     height={164}
