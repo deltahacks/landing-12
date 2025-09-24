@@ -20,7 +20,7 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
         />
       </div>
       <h2 className="text-center text-sm text-white md:text-2xl">{name}</h2>
-      <p className="px-5 text-center text-xs text-[#DADADA] md:text-2xl">
+      <p className="px-5 text-center text-xs text-dh-grey md:text-2xl">
         {description}
       </p>
     </div>

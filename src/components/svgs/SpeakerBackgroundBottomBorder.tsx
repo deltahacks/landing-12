@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SpeakerDown: React.FC<SVGProps<SVGSVGElement>> = (props) => (
+const SpeakerBackgroundBottomBorder: React.FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width={1440}
     height={224}
@@ -39,4 +39,4 @@ const SpeakerDown: React.FC<SVGProps<SVGSVGElement>> = (props) => (
     </defs>
   </svg>
 );
-export default SpeakerDown;
+export default SpeakerBackgroundBottomBorder;

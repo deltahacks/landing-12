@@ -27,7 +27,7 @@ const speakersInfo: SpeakerInfoType[] = [
   {
     id: 4,
     name: "Chris Bautista (TrashDev)",
-    description: "Streamer & Netflix Engineer",
+    description: "Streamer & Senior Netflix Engineer",
     imagePath: "/assets/speakers/trash.jpg",
   },
 ];
