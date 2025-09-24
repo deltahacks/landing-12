@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 const SpeakerTop: React.FC<SVGProps<SVGSVGElement>> = (props) => (
-    <svg
+  <svg
     width={1440}
     height={164}
     viewBox="0 0 1440 164"

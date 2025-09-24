@@ -14,7 +14,7 @@ const speakersInfo: SpeakerInfoType[] = [
   },
   {
     id: 2,
-    name: "Ivan Zhang", 
+    name: "Ivan Zhang",
     description: "Co-Founder of Cohere",
     imagePath: "/assets/speakers/ivan.jpg",
   },
