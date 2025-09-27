@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Carousel from "~/components/TeamCarousel";
 
 export default function HomePage() {
   return (
@@ -32,6 +33,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      <Carousel />
     </main>
   );
 }
