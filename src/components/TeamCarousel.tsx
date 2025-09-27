@@ -34,13 +34,7 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="relative w-full overflow-hidden pb-12">
-        {hoveredIdx !== null && members[hoveredIdx] && (
-          <div className="absolute bottom-2/12 left-1/2 -translate-x-1/2 text-center text-xs font-semibold">
-            {members[hoveredIdx].fullName}, {members[hoveredIdx].team}{" "}
-            {members[hoveredIdx].emoji}
-          </div>
-        )}
+      <div className="w-full overflow-hidden">
         <div
           ref={emblaRef}
           className="[mask-image:linear-gradient(to_right,transparent,black_6%,black_93%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_93%,transparent)]"
@@ -66,6 +60,16 @@ export default function Carousel() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex justify-center pb-12">
+          <div className="flex h-6 items-center">
+            {hoveredIdx !== null && members[hoveredIdx] && (
+              <div className="text-center text-xs font-semibold">
+                {members[hoveredIdx].fullName}, {members[hoveredIdx].team}{" "}
+                {members[hoveredIdx].emoji}
+              </div>
+            )}
           </div>
         </div>
       </div>
