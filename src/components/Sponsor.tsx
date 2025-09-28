@@ -2,6 +2,7 @@ import React from "react";
 import { cva } from "class-variance-authority";
 import Box from "./svgs/Box";
 import clsx from "clsx";
+import Image from "next/image";
 
 const containerVariants = cva("relative flex shadow-md shadow-gray-500/40", {
   variants: {
@@ -42,10 +43,6 @@ export interface SponsorData {
   className?: string;
 }
 
-export const Logo: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (
-  props,
-) => <img {...props} alt={props.alt} className="w-full" />;
-
 const Sponsor: React.FC<SponsorData> = ({
   src,
   alt,
@@ -62,7 +59,13 @@ const Sponsor: React.FC<SponsorData> = ({
       <Box className="h-full w-full" />
       {src && (
         <div className={logoVariants({ size })}>
-          <Logo src={src} alt={alt} />
+          <Image
+            src={src}
+            width={0}
+            height={0}
+            alt={alt ?? "Sponsor logo"}
+            className="w-full"
+          />
         </div>
       )}
     </>
