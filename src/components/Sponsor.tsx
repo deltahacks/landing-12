@@ -1,15 +1,29 @@
 import React from "react";
 import { cva } from "class-variance-authority";
+import Box from "./svgs/Box";
 import clsx from "clsx";
 
-const sponsorVariants = cva(
-  "flex max-h-32 items-center justify-center bg-[#533688] p-6 [&>img]:text-white",
+const containerVariants = cva("relative flex shadow-md shadow-gray-500/40", {
+  variants: {
+    size: {
+      large: "w-50 lg:w-85",
+      medium: "w-44 lg:w-65",
+      small: "w-28 lg:w-50",
+    },
+  },
+  defaultVariants: {
+    size: "medium",
+  },
+});
+
+const logoVariants = cva(
+  "absolute top-0 flex h-full w-full items-center justify-center",
   {
     variants: {
       size: {
-        large: "col-span-12 md:col-span-12 flex justify-center",
-        medium: "col-span-6 flex justify-center",
-        small: "col-span-4 sm:col-span-3 flex justify-center",
+        large: "px-7.5 lg:px-14",
+        medium: "px-7 lg:px-10",
+        small: "px-4.5 lg:px-7.5",
       },
     },
     defaultVariants: {
@@ -18,51 +32,56 @@ const sponsorVariants = cva(
   },
 );
 
-export type SponsorVarientSizes = "large" | "medium" | "small";
+export type SponsorVariantSizes = "large" | "medium" | "small";
 
-// Sponsor Component
 export interface SponsorData {
-  src: string;
-  alt: string;
-  link: string;
-  size: SponsorVarientSizes;
+  src?: string;
+  alt?: string;
+  link?: string;
+  size: SponsorVariantSizes;
+  className?: string;
 }
 
-export const ResponsiveImage: React.FC<
-  React.ImgHTMLAttributes<HTMLImageElement>
-> = (props) => (
-  <img
-    {...props}
-    alt={props.alt ?? "Sponsor Logo"}
-    className={clsx(
-      "mx-auto h-20 max-h-full object-contain text-white",
-      props.className,
-    )}
-  />
-);
+export const Logo: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (
+  props,
+) => <img {...props} alt={props.alt} className="w-full" />;
 
-// Sponsor Component
 const Sponsor: React.FC<SponsorData> = ({
   src,
   alt,
   link,
   size = "medium",
+  className,
 }) => {
-  const commonProps = {
-    className: sponsorVariants({ size }),
+  const containerProps = {
+    className: clsx(containerVariants({ size }), className),
   };
 
-  const content = <ResponsiveImage src={src} alt={alt} />;
+  const content = (
+    <>
+      <Box className="h-full w-full" />
+      {src && (
+        <div className={logoVariants({ size })}>
+          <Logo src={src} alt={alt} />
+        </div>
+      )}
+    </>
+  );
 
   if (link) {
     return (
-      <a {...commonProps} href={link} target="_blank" rel="noopener noreferrer">
+      <a
+        {...containerProps}
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {content}
       </a>
     );
   }
 
-  return <div {...commonProps}>{content}</div>;
+  return <div {...containerProps}>{content}</div>;
 };
 
 export default Sponsor;
