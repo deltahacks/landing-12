@@ -21,17 +21,17 @@ const darumadropOne = Darumadrop_One({
   variable: "--font-darumdrop",
 });
 
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  variable: "--font-fredoka",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none`}
-    >
-      <body className="bg-background overscroll-none">
-        <PostHogProvider>{children}</PostHogProvider>
-      </body>
+    <html lang="en" className={`${geist.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
