@@ -28,9 +28,9 @@ const Question: React.FC<QuestionProps> = ({
     <div className="w-full">
       <details
         ref={detailsRef}
-        className={clsx("group py-1.5 md:py-2", isOpen && "open")}
+        className={clsx("group py-1.5 md:py-1.5 lg:py-2", isOpen && "open")}
       >
-        <summary className="focus-visible:ring-opacity-75 text-brown flex w-full cursor-pointer list-none items-center gap-1.5 rounded-lg px-2.5 py-1 text-left text-xs leading-tight font-medium transition-all duration-200 hover:bg-white/20 hover:shadow-lg focus:outline-none focus-visible:ring focus-visible:ring-white/50 md:py-1.5 md:text-xs md:leading-tight">
+        <summary className="focus-visible:ring-opacity-75 text-brown flex w-full cursor-pointer list-none items-center gap-1.5 rounded-lg px-2.5 py-1 text-left text-xs leading-tight font-medium transition-all duration-200 hover:bg-white/20 focus:outline-none focus-visible:ring focus-visible:ring-white/50 md:py-1 md:text-xs md:leading-tight lg:py-1.5 lg:text-sm lg:leading-normal">
           <span className="relative h-3 w-3 flex-shrink-0">
             <PlusIcon
               className={clsx(
@@ -47,7 +47,7 @@ const Question: React.FC<QuestionProps> = ({
           </span>
           {question}
         </summary>
-        <div className="content text-brown w-full rounded-b-lg bg-white/15 px-2.5 py-0.5 text-xs leading-tight backdrop-blur-sm md:py-1 md:leading-snug">
+        <div className="content text-brown w-full rounded-b-lg px-2.5 py-0.5 text-xs leading-tight md:py-0.5 md:leading-tight lg:py-1 lg:leading-snug">
           {answer}
         </div>
       </details>

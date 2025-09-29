@@ -61,22 +61,16 @@ const FAQ: React.FC = () => {
               alt="FAQ Background"
               width={1200}
               height={800}
-              className="h-auto w-[75vw] max-w-5xl min-w-2xl object-contain"
+              className="h-auto w-[88vw] max-w-6xl min-w-2xl object-contain lg:w-[88vw]"
               priority
             />
           </div>
 
           <div className="absolute inset-0 mt-16 flex items-center justify-center md:mt-20">
-            <div
-              className="mx-auto w-72 overflow-hidden rounded-2xl border border-white/30 shadow-2xl backdrop-blur-md md:w-[65vw] md:max-w-4xl md:min-w-2xl"
-              style={{
-                background:
-                  "linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))",
-              }}
-            >
-              <div className="p-2 md:p-3">
-                <div className="flex flex-col gap-1 md:flex-row md:gap-4">
-                  <div className="flex flex-1 flex-col gap-1 md:gap-1.5">
+            <div className="mx-auto w-72 overflow-hidden rounded-2xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-md md:w-[45vw] md:max-w-xl md:min-w-2xl lg:w-[70vw] lg:max-w-5xl">
+              <div className="p-1 lg:p-3">
+                <div className="flex flex-col gap-0 md:flex-row lg:gap-4">
+                  <div className="flex flex-1 flex-col gap-0.5 lg:gap-1">
                     {leftColumnQuestions.map(({ question, answer }, index) => (
                       <Question
                         question={question}
@@ -91,7 +85,7 @@ const FAQ: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="flex flex-1 flex-col gap-1 md:gap-1.5">
+                  <div className="flex flex-1 flex-col gap-0.5 lg:gap-1">
                     {rightColumnQuestions.map(({ question, answer }, index) => {
                       const globalIndex = midpoint + index;
                       return (
