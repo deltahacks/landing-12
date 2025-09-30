@@ -6,7 +6,6 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
   name,
   description,
   imagePath,
-  id,
 }) => {
   return (
     <div className="flex flex-col gap-2">
