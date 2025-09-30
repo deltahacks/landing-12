@@ -3,6 +3,7 @@ import { cva } from "class-variance-authority";
 import Box from "./svgs/Box";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
 const containerVariants = cva("relative flex shadow-md shadow-gray-500/40", {
   variants: {
@@ -73,14 +74,14 @@ const Sponsor: React.FC<SponsorData> = ({
 
   if (link) {
     return (
-      <a
+      <Link
         {...containerProps}
         href={link}
         target="_blank"
         rel="noopener noreferrer"
       >
         {content}
-      </a>
+      </Link>
     );
   }
 
