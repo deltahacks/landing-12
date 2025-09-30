@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           DeltaHacks 12
         </h1>
         <p className="font-fredoka py-4 text-xs md:text-2xl">
-          McMaster University's annual hackathon for change.
+          {"McMaster University's annual hackathon for change."}
         </p>
 
         <Link
