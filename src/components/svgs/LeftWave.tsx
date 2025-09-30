@@ -7,6 +7,7 @@ const LeftWave: React.FC<SVGProps<SVGSVGElement>> = (props) => (
     viewBox="0 0 234 34"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    shapeRendering="geometricPrecision"
     {...props}
   >
     <path

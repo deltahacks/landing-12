@@ -7,6 +7,7 @@ const Tomato: React.FC<SVGProps<SVGSVGElement>> = (props) => (
     viewBox="0 0 156 166"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    shapeRendering="geometricPrecision"
     {...props}
   >
     <ellipse

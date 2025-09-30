@@ -7,6 +7,7 @@ const Discount: React.FC<SVGProps<SVGSVGElement>> = (props) => (
     viewBox="0 0 181 192"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    shapeRendering="geometricPrecision"
     {...props}
   >
     <path
