@@ -9,11 +9,11 @@ const config = {
   async rewrites() {
     return [
       {
-        source: "/ingest/static/:path*",
+        source: "/api/m/static/:path*",
         destination: "https://us-assets.i.posthog.com/static/:path*",
       },
       {
-        source: "/ingest/:path*",
+        source: "/api/m/:path*",
         destination: "https://us.i.posthog.com/:path*",
       },
     ];
