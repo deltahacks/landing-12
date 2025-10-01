@@ -104,9 +104,9 @@ const Speakers: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-12" />
       <div className="w-full max-w-360">
         <div className="w-full px-6 md:px-40 xl:hidden">
+          <div className="h-12" />
           <Image
             className="w-full"
             src="/assets/shopping-cart.png"
@@ -116,37 +116,39 @@ const Speakers: React.FC = () => {
           />
         </div>
       </div>
-      <div className="h-14" />
+      <div className="h-14 xl:h-5" />
       <footer className="flex flex-col justify-center pb-20 md:px-40">
         <p className="font-fredoka m-0 p-0 text-center text-sm text-[#766060]">
           Made with 🩷 from the DeltaHacks Team
         </p>
         <TeamCarousel />
         <div className="flex flex-col gap-4 px-4">
-          <div className="w-full border-t border-dashed border-[#766060]" />
-          <div className="flex w-full justify-between px-5">
-            <a
-              href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
-              className="text-xs text-[#766060] hover:underline"
-            >
-              Code of Conduct
-            </a>
-            <a
-              href="https://mlh.io/privacy"
-              className="text-xs text-[#766060] hover:underline"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="https://mlh.io/travel"
-              className="text-xs text-[#766060] hover:underline"
-            >
-              Travel Guidelines
-            </a>
+          <div className="w-full border-t border-dashed border-[#766060] lg:border-solid" />
+          <div className="flex flex-col justify-between gap-4 xl:flex-row">
+            <div className="flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
+              <a
+                href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+                className="text-xs text-[#766060] hover:underline"
+              >
+                Code of Conduct
+              </a>
+              <a
+                href="https://mlh.io/privacy"
+                className="text-xs text-[#766060] hover:underline"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="https://mlh.io/travel"
+                className="text-xs text-[#766060] hover:underline"
+              >
+                Travel Guidelines
+              </a>
+            </div>
+            <p className="text-center text-sm text-[#766060]">
+              © Copyright 2026 DeltaHacks
+            </p>
           </div>
-          <p className="text-center text-sm text-[#766060]">
-            © Copyright 2026 DeltaHacks
-          </p>
         </div>
       </footer>
     </div>
