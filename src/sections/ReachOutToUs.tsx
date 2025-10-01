@@ -73,7 +73,7 @@ const Speakers: React.FC = () => {
                     id="mce-success-response"
                   ></div>
                 </div>
-                <div aria-hidden="true" className="absolute left-[-5000px]">
+                <div aria-hidden="true" className="absolute -left-1250">
                   <input
                     type="text"
                     name="b_7ac221f02edc4242db4789d8f_380c22c749"
@@ -90,7 +90,7 @@ const Speakers: React.FC = () => {
                     className={`absolute flex h-full w-full items-center justify-center rounded-md bg-[#FFFFFF] text-[#C89D9D] transition-all duration-50 ${
                       isPressed
                         ? "top-0 left-0 border border-[#C89D9D]"
-                        : "top-[-3px] left-[3px]"
+                        : "top-[-2px] left-[2px]"
                     } cursor-pointer`}
                     type="submit"
                     name="subscribe"
@@ -144,10 +144,7 @@ const Speakers: React.FC = () => {
                 >
                   Privacy Policy
                 </a>
-                <a
-                  href="https://mlh.io/travel"
-                  className="text-xs text-[#766060] hover:underline"
-                >
+                <a href="#" className="text-xs text-[#766060] hover:underline">
                   Travel Guidelines
                 </a>
               </div>
