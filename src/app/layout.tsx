@@ -24,8 +24,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${darumadropOne.variable} ${fredoka.variable}`}>
-      <body className="bg-background">{children}</body>
+    <html
+      lang="en"
+      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none`}
+    >
+      <body className="bg-background overscroll-none">{children}</body>
     </html>
   );
 }
