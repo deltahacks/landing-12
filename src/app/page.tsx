@@ -1,9 +1,9 @@
 import Hero from "~/sections/Hero";
+import { posthogServerClient } from "~/lib/posthog";
 
 export const revalidate = 60;
-export const dynamic = "force-dynamic";
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <>
       <Hero />
