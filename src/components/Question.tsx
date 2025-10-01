@@ -34,7 +34,7 @@ const Question: React.FC<QuestionProps> = ({
           <span className="relative h-3 w-3 flex-shrink-0">
             <PlusIcon
               className={clsx(
-                "text-brown absolute h-3 w-3 transition-opacity duration-200",
+                "text-brown absolute h-3 w-3 transition-opacity  duration-200",
                 isOpen ? "opacity-0" : "opacity-100",
               )}
             />
@@ -47,7 +47,7 @@ const Question: React.FC<QuestionProps> = ({
           </span>
           {question}
         </summary>
-        <div className="content text-brown w-full rounded-b-lg px-2.5 py-0.5 text-xs leading-tight md:py-0.5 md:leading-tight lg:py-1 lg:leading-snug">
+        <div className="content text-brown w-full rounded-b-lg pl-7.5 py-0.5 text-xs leading-tight md:py-0.5 md:leading-tight lg:py-1 lg:leading-snug">
           {answer}
         </div>
       </details>
