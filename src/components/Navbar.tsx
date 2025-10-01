@@ -1,38 +1,41 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { Drawer } from "vaul";
 import clsx from "clsx";
+
+import NavClose from "./svgs/NavClose";
+import NavDevpost from "./svgs/NavDevpost";
+import NavInsta from "./svgs/NavInsta";
+import NavLinkedin from "./svgs/NavLinkedin";
+import NavMLHTrustBadge from "./svgs/NavMLHTrustBadge";
+import NavSizing from "./svgs/NavSizing";
+import NavTiktok from "./svgs/NavTiktok";
+import NavLogo from "./svgs/NavLogo";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  //   const [blur, setBlur] = useState(false);
-
   const hideSidebar = () => {
     setOpen(false);
   };
 
+  // Handle navbar scroll disappearance on mobile
   useEffect(() => {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
 
-      // Only apply scroll behavior on mobile screens (below md breakpoint)
       if (window.innerWidth < 768) {
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          // Scrolling down and past 100px - hide navbar
           setIsNavVisible(false);
         } else if (currentScrollY < lastScrollY) {
-          // Scrolling up - show navbar
           setIsNavVisible(true);
         }
       } else {
-        // Always show navbar on desktop
         setIsNavVisible(true);
       }
 
@@ -53,19 +56,13 @@ const Navbar: React.FC = () => {
         !isNavVisible && "-translate-y-[120%] md:translate-y-0",
       )}
     >
-      <div className="flex h-full lg:gap-6 lg:px-4 xl:gap-14">
+      <div className="flex h-full lg:gap-6 xl:gap-14">
         <div className="z-0 flex md:flex md:items-center md:gap-4">
           <Link href="/">
-            <Image
-              width="36"
-              height="36"
-              className="z-0 flex"
-              src="/navbar/nav_logo.svg"
-              alt="logo"
-            />
+            <NavLogo width={26} height={26} className="h-9 w-9 md:h-6 md:w-6" />
           </Link>
         </div>
-        <div className="font-display md:text-md hidden w-fit items-center justify-between gap-6 px-12 text-white md:flex lg:px-0 xl:gap-12">
+        <div className="font-display md:text-md hidden w-fit items-center justify-between text-white md:flex md:gap-4 md:px-6 md:text-sm lg:gap-6 lg:px-12 lg:pl-2 lg:text-lg xl:gap-12">
           <Link href="#TBA">About</Link>
           <Link href="#TBA">Statistics</Link>
           <Link href="#TBA">Past Events</Link>
@@ -73,56 +70,26 @@ const Navbar: React.FC = () => {
           <Link href="#FAQ">FAQ</Link>
         </div>
       </div>
-      <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-40">
+      <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-30">
         <Link href="https://linkedin.com/company/deltahacks" target="_blank">
-          <Image
-            className=""
-            width="36"
-            height="36"
-            src="/navbar/nav_linkedin.svg"
-            alt="LinkedIn"
-          />
+          <NavLinkedin width={30} height={30} />
         </Link>
         <Link href="https://www.instagram.com/deltahacks" target="_blank">
-          <Image
-            className=""
-            width="36"
-            height="36"
-            src="/navbar/nav_insta.svg"
-            alt="Instagram"
-          />
+          <NavInsta width={30} height={30} />
         </Link>
         <Link href="https://deltahacks-xi.devpost.com/" target="_blank">
-          <Image
-            className=""
-            width="36"
-            height="36"
-            src="/navbar/nav_devpost.svg"
-            alt="Devpost"
-          />
+          <NavDevpost width={30} height={30} />
         </Link>
         <Link href="https://www.tiktok.com/@deltahacks" target="_blank">
-          <Image
-            className=""
-            width="36"
-            height="36"
-            src="/navbar/nav_tiktak.svg"
-            alt="TikTok"
-          />
+          <NavTiktok width={30} height={30} />
         </Link>
         <Link
           id="mlh-trust-badge"
-          className="absolute right-0 z-50 mt-10 md:w-20"
+          className="absolute right-0 z-50 mt-10"
           href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
           target="_blank"
         >
-          <Image
-            src="/navbar/nav_mlh_trust_badge_2026_gray.svg"
-            alt="Major League Hacking 2026 Hackathon Season"
-            className="w-full"
-            width="36"
-            height="36"
-          />
+          <NavMLHTrustBadge className="w-full" width={136} height={136} />
         </Link>
       </div>
       <div className="inset-0 z-40 md:invisible md:hidden">
@@ -135,32 +102,16 @@ const Navbar: React.FC = () => {
         >
           <Drawer.Trigger asChild>
             <button className="mr-20">
-              {!open && (
-                <Image
-                  width="30"
-                  height="30"
-                  src="/navbar/nav_sizing.svg"
-                  className="w-full"
-                  alt="NAV"
-                />
-              )}
+              {!open && <NavSizing width={30} height={30} className="w-full" />}
             </button>
           </Drawer.Trigger>
           <Link
             id="mlh-trust-badge"
             className="absolute top-0 right-5 z-50 block w-16 max-w-[100px] min-w-[60px]"
-            // style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
             href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
             target="_blank"
           >
-            <Image
-              src="/navbar/nav_mlh_trust_badge_2026_gray.svg"
-              alt="Major League Hacking 2026 Hackathon Season"
-              // style="width:100%"
-              width="36"
-              height="36"
-              className="w-full"
-            />
+            <NavMLHTrustBadge width={110} height={110} className="w-full" />
           </Link>
           <Drawer.Portal>
             <Drawer.Overlay className="fixed inset-0 bg-black/40" />
@@ -168,11 +119,9 @@ const Navbar: React.FC = () => {
               <Drawer.Title className="sr-only">Navigation Menu</Drawer.Title>
               <div className="absolute top-0 right-0 z-50 px-8 pt-6">
                 {open && (
-                  <Image
-                    width="20"
-                    height="20"
-                    src="/navbar/nav_close.svg"
-                    alt="CLOSE"
+                  <NavClose
+                    width={20}
+                    height={20}
                     className="z-50"
                     onClick={hideSidebar}
                   />
@@ -197,45 +146,21 @@ const Navbar: React.FC = () => {
                       FAQ
                     </Link>
                   </div>
-                  <div className="align-center flex w-full gap-4 py-16 md:gap-4">
-                    <Link href="https://www.linkedin.com/company/deltahacks/mycompany/">
-                      <Image
-                        className=""
-                        width="36"
-                        height="36"
-                        src="/navbar/nav_linkedin.svg"
-                        alt="logo"
-                      />
-                    </Link>
+                  <div className="align-center flex w-full gap-4 py-16">
                     <Link href="https://www.instagram.com/deltahacks">
-                      <Image
-                        className=""
-                        width="36"
-                        height="36"
-                        src="/navbar/nav_insta.svg"
-                        alt="Instagram"
-                      />
+                      <NavInsta width={48} height={48} />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/deltahacks/mycompany/">
+                      <NavLinkedin width={48} height={48} />
                     </Link>
                     <Link
                       href="https://deltahacks-xi.devpost.com/"
                       target="_blank"
                     >
-                      <Image
-                        className=""
-                        width="36"
-                        height="36"
-                        src="/navbar/nav_devpost.svg"
-                        alt="Devpost"
-                      />
+                      <NavDevpost width={48} height={48} />
                     </Link>
                     <Link href="https://www.tiktok.com/@deltahacks">
-                      <Image
-                        className=""
-                        width="36"
-                        height="36"
-                        src="/navbar/nav_tiktak.svg"
-                        alt="TikTok"
-                      />
+                      <NavTiktok width={48} height={48} />
                     </Link>
                   </div>
                 </div>
