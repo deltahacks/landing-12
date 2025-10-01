@@ -20,10 +20,7 @@ const FAQ: React.FC = () => {
   const handleLeftColumnToggle = (questionIndex: number) => {
     const globalIndex = questionIndex;
     setOpenMobileIndex((prev) => (prev === globalIndex ? null : globalIndex));
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      setOpenRightColumnIndex(null);
-    }
-
+    setOpenRightColumnIndex(null);
     setOpenLeftColumnIndex((prev) =>
       prev === questionIndex ? null : questionIndex,
     );
@@ -32,10 +29,7 @@ const FAQ: React.FC = () => {
   const handleRightColumnToggle = (questionIndex: number) => {
     const globalIndex = midpoint + questionIndex;
     setOpenMobileIndex((prev) => (prev === globalIndex ? null : globalIndex));
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      setOpenLeftColumnIndex(null);
-    }
-
+    setOpenLeftColumnIndex(null);
     setOpenRightColumnIndex((prev) =>
       prev === questionIndex ? null : questionIndex,
     );
