@@ -71,7 +71,10 @@ const Navbar: React.FC = () => {
         </div>
       </div>
       <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-30">
-        <Link href="https://linkedin.com/company/deltahacks" target="_blank">
+        <Link
+          href="https://www.linkedin.com/company/deltahacks"
+          target="_blank"
+        >
           <NavLinkedin width={30} height={30} />
         </Link>
         <Link href="https://www.instagram.com/deltahacks" target="_blank">
