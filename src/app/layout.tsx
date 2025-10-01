@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Darumadrop_One, Fredoka } from "next/font/google";
+import { PostHogProvider } from "~/components/PostHogProvider";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -24,8 +25,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${darumadropOne.variable} ${fredoka.variable}`}>
-      <body className="bg-background">{children}</body>
+    <html
+      lang="en"
+      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none`}
+    >
+      <body className="bg-background overscroll-none">
+        <PostHogProvider>{children}</PostHogProvider>
+      </body>
     </html>
   );
 }

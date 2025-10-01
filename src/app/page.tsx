@@ -1,7 +1,12 @@
-import Link from "next/link";
-import AboutUsCard from "~/components/AboutUsCard";
-import ReachOutToUs from "~/sections/ReachOutToUs";
+import Hero from "~/sections/Hero";
+import { posthogServerClient } from "~/lib/posthog";
 
-export default function HomePage() {
-  return <ReachOutToUs />;
+export const revalidate = 60;
+
+export default async function HomePage() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
