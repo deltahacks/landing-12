@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Darumadrop_One, Fredoka } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -9,17 +9,26 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
+const fredoka = Fredoka({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-fredoka",
+});
+
+const darumadropOne = Darumadrop_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-darumdrop",
 });
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none`}
+    >
+      <body className="bg-background overscroll-none">{children}</body>
     </html>
   );
 }
