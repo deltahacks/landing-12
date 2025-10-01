@@ -2,8 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import hero from "~/components/svgs/Hero.png";
+import { posthogServerClient } from "~/lib/posthog";
 
-const Hero: React.FC = () => {
+const Hero: React.FC = async () => {
+  const applicationsOpen = await posthogServerClient.isFeatureEnabled(
+    "applications-open",
+    "user distinct id",
+  );
+
   return (
     <main className="grid h-[80vh] grid-cols-1 grid-rows-1 bg-gradient-to-b from-[#182B8C] to-[#B2ACEA] md:h-screen">
       <div className="col-start-1 col-end-1 row-start-1 row-end-1 flex items-end">
@@ -29,12 +35,14 @@ const Hero: React.FC = () => {
           {"McMaster University's annual hackathon for change."}
         </p>
 
-        <Link
-          href="https://portal.deltahacks.com"
-          className="inline-block rounded-full border-2 bg-[#2B2052] px-8 py-3 text-2xl shadow-lg"
-        >
-          Apply Now
-        </Link>
+        {applicationsOpen && (
+          <Link
+            href="https://portal.deltahacks.com"
+            className="inline-block rounded-full border-2 bg-[#2B2052] px-8 py-3 text-2xl shadow-lg"
+          >
+            Apply Now
+          </Link>
+        )}
       </div>
     </main>
   );
