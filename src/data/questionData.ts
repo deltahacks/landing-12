@@ -4,12 +4,12 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is a type of technical competition! We provide our attendees with the opportunity to work with new people on cool ideas, and the resources necessary to make those ideas come to life. We do not condone, nor do we allow any actual hacking or other illegal activities! DeltaHacks is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
+      "A hackathon is a type of technical competition! Attendees work with new people on cool ideas and get the resources needed to bring them to life. We do not condone, nor allow, any hacking or illegal activities! DeltaHacks is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
   },
   {
     question: "What is DeltaHacks?",
     answer:
-      "The word “delta Δ” stands for change, and we used this definition to name DeltaHacks - McMaster’s annual Hackathon for Change. This year, DeltaHacks will be a 600-participant event taking place the second week of January 2025. We hope to inspire students to hack for positive changes that align with their passions - whether it's for the environment, health, inequality, education, or more!",
+      "The word “delta Δ” means change, which inspired the name DeltaHacks - McMaster's annual Hackathon for Change. This year, DeltaHacks will host 600 participants in the second week of January 2025. We aim to inspire students to hack for positive change in areas like the environment, health, inequality, education, and more!",
   },
   {
     question: "Who can participate?",
@@ -17,7 +17,7 @@ export const faq_questions: QuestionType[] = [
       "Anyone who is willing to learn and have fun! If you have an idea - or even if you don't, you're invited! All university and high school students over 13 during the date of the event are welcome at DeltaHacks!",
   },
   {
-    question: "I have never been to a hackathon before, what should I do?",
+    question: "I'm new to hackathons, what should I do?",
     answer:
       "We love first time hackers! We will be providing mentors during the hackathon and running workshops, so you’re welcome no matter your skill or experience level.",
   },
