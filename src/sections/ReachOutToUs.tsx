@@ -1,25 +1,8 @@
-"use client";
 import { Mail, MoveRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 import TeamCarousel from "~/components/TeamCarousel";
 
-const Speakers: React.FC = () => {
-  const [isPressed, setIsPressed] = useState(false);
-
-  const handleMouseDown = () => {
-    setIsPressed(true);
-  };
-
-  const handleMouseUp = () => {
-    setIsPressed(false);
-    console.log("Newsletter signup clicked!");
-  };
-
-  const handleMouseLeave = () => {
-    setIsPressed(false);
-  };
-
+const ReachOutToUs: React.FC = () => {
   return (
     <div className="flex w-full flex-col justify-center">
       <div className="flex w-full justify-center">
@@ -55,13 +38,7 @@ const Speakers: React.FC = () => {
                   />
                 </div>
                 <div className="hidden">
-                  <input
-                    type="hidden"
-                    name="tags"
-                    value="24287902"
-                    // Remove warning about an input field having a value but no onChange handler
-                    onChange={() => null}
-                  />
+                  <input type="hidden" name="tags" value="24287902" />
                 </div>
                 <div id="mce-responses" className="clear">
                   <div
@@ -81,25 +58,12 @@ const Speakers: React.FC = () => {
                   />
                 </div>
                 <div className="relative min-h-7 min-w-12">
-                  <div
-                    className={`absolute inset-0 h-full w-full rounded-md bg-[#C89D9D] ${
-                      isPressed ? "border border-gray-400" : ""
-                    }`}
-                  />
+                  <div className="absolute inset-0 h-full w-full rounded-md bg-[#C89D9D]" />
                   <button
-                    className={`absolute flex h-full w-full items-center justify-center rounded-md bg-[#FFFFFF] text-[#C89D9D] transition-all duration-50 ${
-                      isPressed
-                        ? "top-0 left-0 border border-[#C89D9D]"
-                        : "top-[-2px] left-[2px]"
-                    } cursor-pointer`}
+                    className="absolute top-[-2px] left-[2px] flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-[#FFFFFF] text-[#C89D9D] transition-all duration-100 active:top-0 active:left-0 active:border active:border-[#C89D9D]"
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    onMouseDown={handleMouseDown}
-                    onMouseUp={handleMouseUp}
-                    onMouseLeave={handleMouseLeave}
-                    onTouchStart={handleMouseDown}
-                    onTouchEnd={handleMouseUp}
                   >
                     <MoveRight className="h-4 w-4" />
                   </button>
@@ -131,7 +95,7 @@ const Speakers: React.FC = () => {
           <div className="flex flex-col gap-4 px-4">
             <div className="w-full border-t border-dashed border-[#766060] lg:border-solid" />
             <div className="flex flex-col justify-between gap-4 xl:flex-row">
-              <div className="flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
+              <div className="font-fredoka flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
                 <a
                   href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
                   className="text-xs text-[#766060] hover:underline"
@@ -149,7 +113,7 @@ const Speakers: React.FC = () => {
                 </a>
               </div>
               <p className="text-center text-sm text-[#766060]">
-                © Copyright 2026 DeltaHacks
+                © Copyright 2025 DeltaHacks
               </p>
             </div>
           </div>
@@ -159,4 +123,4 @@ const Speakers: React.FC = () => {
   );
 };
 
-export default Speakers;
+export default ReachOutToUs;
