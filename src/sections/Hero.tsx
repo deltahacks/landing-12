@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import hero from "../components/svgs/Hero.png";
+import hero from "~/components/svgs/Hero.png";
 
 const Hero: React.FC = () => {
   return (
