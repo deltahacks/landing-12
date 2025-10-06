@@ -13,10 +13,10 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
 }) => {
   return (
-    <div className="w-screen md:relative md:-mb-64">
+    <div className="h-screen w-screen border-4 border-red-500 bg-lime-500 md:relative">
       <div
         className={clsx(
-          "w-screen md:absolute md:top-0 md:flex md:items-center md:justify-center xl:top-48",
+          "w-screen md:absolute md:top-0 md:flex md:items-center md:justify-center xl:top-16",
           className,
         )}
       >
@@ -53,28 +53,6 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
             ))}
           </div>
         </div>
-      </div>
-      <div className="hidden md:block">
-        <Image
-          src={statsImg}
-          placeholder="blur"
-          height={4086}
-          width={2880}
-          blurDataURL={statsImg.blurDataURL}
-          alt="About Background"
-          className="w-full object-contain"
-        />
-      </div>
-      <div className="-mb-20 md:m-0 md:hidden">
-        <Image
-          src={statsMobileImg}
-          placeholder="blur"
-          height={1106}
-          width={644}
-          blurDataURL={statsMobileImg.blurDataURL}
-          alt="About Background"
-          className="w-full object-contain"
-        />
       </div>
     </div>
   );

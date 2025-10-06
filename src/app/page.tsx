@@ -11,10 +11,13 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <About />
-      <Speakers />
+      <div className="flex h-[50vh] items-center justify-center bg-lime-500">
+        Sample Section
+      </div>
+      {/* <About /> */}
+      {/*<Speakers />
       <Sponsors />
-      <FAQ />
+      <FAQ /> */}
     </>
   );
 }
