@@ -15,11 +15,6 @@ const Hero: React.FC = async () => {
       <div className="absolute bottom-0 left-0 h-full w-screen overflow-hidden">
         <div className="absolute top-1/2 left-1/2 w-[1500px] -translate-x-1/2 -translate-y-1/2">
           <HeroScrollBackground />
-          Excepteur sint laboris aute qui in minim sunt in veniam sint velit et.
-          Do sint ut adipisicing ipsum qui sunt occaecat adipisicing anim sunt
-          do aliquip dolor labore mollit. Et in ut deserunt velit. Magna est
-          excepteur irure culpa consectetur est laboris cillum culpa irure
-          aliqua dolore nostrud laborum.
         </div>
       </div>
       <main className="grid h-[80vh] grid-cols-1 grid-rows-1 bg-gradient-to-b from-[#182B8C] to-[#B2ACEA] md:h-screen">
