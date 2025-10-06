@@ -32,12 +32,12 @@ const HeroScrollBackground = () => {
         placeholder="blur"
       />
       <Door
-        className="absolute top-[55.5%] left-[35%] scale-[1.02]"
-        style={{ transform: `translateX(${-doorTransform}px)` }}
+        className="absolute top-[55.5%] left-[35.1%] scale-[1.02]"
+        translateX={-doorTransform}
       />
       <Door
         className="absolute top-[55.5%] left-[44.5%] scale-[1.02]"
-        style={{ transform: `translateX(${doorTransform}px)` }}
+        translateX={doorTransform}
       />
     </div>
   );
