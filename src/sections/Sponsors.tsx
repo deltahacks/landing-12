@@ -77,7 +77,9 @@ const Sponsors: React.FC = () => {
 
     // add empty filler box for small boxes (assuming max 12 small boxes for now)
     if (sponsors[0]?.size === "small" && sponsors.length % 12 !== 0) {
-      for (let i = 0; i < 12 - (sponsors.length % 12); i++) {
+      const max =
+        sponsors.length > 12 ? sponsors.length % 12 : 12 - sponsors.length;
+      for (let i = 0; i < max; i++) {
         boxes.push(<Sponsor size="small" key={`sponsor_small_empty_${i}`} />);
       }
     }

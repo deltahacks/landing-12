@@ -115,7 +115,6 @@ const sponsorsInfo: SponsorInfoType[] = [
     link: "https://incogni.com/",
     size: "small",
   },
-
   {
     imagePath: "/assets/sponsors/saily.svg",
     name: "Saily",
