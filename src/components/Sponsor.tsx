@@ -64,7 +64,7 @@ const Sponsor: React.FC<SponsorData> = ({
             src={src}
             width={0}
             height={0}
-            alt={alt ?? "Sponsor logo"}
+            alt={`${alt} Sponsor Logo`}
             className="h-full w-full object-contain"
           />
         </div>
