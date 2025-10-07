@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Sponsor from "~/components/Sponsor";
 import Trolley from "~/components/svgs/Trolley";
 import sponsorsInfo, { type SponsorInfoType } from "~/data/sponsorsData";
@@ -12,6 +15,14 @@ const Sponsors: React.FC = () => {
   const sponsorsInfoSmall = sponsorsInfo.filter(
     (sponsor) => sponsor.size === "small",
   );
+
+  const [width, setWidth] = useState<number>(0);
+  useEffect(() => {
+    const updateWidth = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   const generateSponsorBoxes = (sponsors: SponsorInfoType[]) => {
     if (sponsors.length === 0) {
@@ -76,10 +87,9 @@ const Sponsors: React.FC = () => {
     }
 
     // add empty filler box for small boxes (assuming max 12 small boxes for now)
-    if (sponsors[0]?.size === "small" && sponsors.length % 12 !== 0) {
-      const max =
-        sponsors.length > 12 ? sponsors.length % 12 : 12 - sponsors.length;
-      for (let i = 0; i < max; i++) {
+    const rowLength = width >= 1024 ? 4 : 3;
+    if (sponsors[0]?.size === "small" && sponsors.length % rowLength !== 0) {
+      for (let i = 0; i < rowLength - (sponsors.length % rowLength); i++) {
         boxes.push(<Sponsor size="small" key={`sponsor_small_empty_${i}`} />);
       }
     }
