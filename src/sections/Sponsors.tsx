@@ -19,8 +19,12 @@ const Sponsors: React.FC = () => {
   const [width, setWidth] = useState<number>(0);
   useEffect(() => {
     const updateWidth = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", updateWidth);
 
+    // initial load
+    updateWidth();
+
+    // update when resized
+    window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
