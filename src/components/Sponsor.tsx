@@ -19,7 +19,7 @@ const containerVariants = cva("relative flex shadow-md shadow-gray-500/40", {
 });
 
 const logoVariants = cva(
-  "absolute top-0 flex h-full py-6 lg:py-6 w-full items-center justify-center",
+  "absolute top-0 flex h-full py-6 lg:py-8 w-full items-center justify-center",
   {
     variants: {
       size: {
