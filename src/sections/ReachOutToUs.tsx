@@ -7,7 +7,15 @@ const ReachOutToUs: React.FC = () => {
     <div className="flex w-full flex-col justify-center">
       <div className="flex w-full justify-center">
         <div className="w-full max-w-360 px-10 md:px-40">
-          <div className="relative z-10 pt-13 xl:h-180 xl:bg-[url('/assets/shopping-cart-with-background.png')] xl:bg-contain xl:bg-right xl:bg-no-repeat">
+          <div className="relative z-10 pt-13 xl:h-180">
+            <Image
+              src="/assets/shopping-cart-with-background.png"
+              alt="Shopping cart illustration"
+              className="absolute right-0 hidden xl:block"
+              width={830}
+              height={720}
+              style={{ objectFit: "contain" }}
+            />
             <div className="flex w-full flex-col gap-3 xl:max-w-sm">
               <h1 className="font-darumdrop text-4xl text-[#766060]">
                 Still have questions?
