@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Sponsor from "~/components/Sponsor";
 import Trolley from "~/components/svgs/Trolley";
 import sponsorsInfo, { type SponsorInfoType } from "~/data/sponsorsData";
@@ -12,6 +15,18 @@ const Sponsors: React.FC = () => {
   const sponsorsInfoSmall = sponsorsInfo.filter(
     (sponsor) => sponsor.size === "small",
   );
+
+  const [width, setWidth] = useState<number>(0);
+  useEffect(() => {
+    const updateWidth = () => setWidth(window.innerWidth);
+
+    // initial load
+    updateWidth();
+
+    // update when resized
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   const generateSponsorBoxes = (sponsors: SponsorInfoType[]) => {
     if (sponsors.length === 0) {
@@ -76,8 +91,9 @@ const Sponsors: React.FC = () => {
     }
 
     // add empty filler box for small boxes (assuming max 12 small boxes for now)
-    if (sponsors[0]?.size === "small" && sponsors.length % 12 !== 0) {
-      for (let i = 0; i < 12 - (sponsors.length % 12); i++) {
+    const rowLength = width >= 1024 ? 4 : 3;
+    if (sponsors[0]?.size === "small" && sponsors.length % rowLength !== 0) {
+      for (let i = 0; i < rowLength - (sponsors.length % rowLength); i++) {
         boxes.push(<Sponsor size="small" key={`sponsor_small_empty_${i}`} />);
       }
     }
@@ -87,6 +103,15 @@ const Sponsors: React.FC = () => {
 
   return (
     <div className="mx-auto w-fit">
+      <div className="mx-auto mb-8 max-w-95 px-5 lg:max-w-200">
+        <h1 className="font-darumdrop mb-2.5 text-center text-6xl text-[#836666] lg:mb-2.5 lg:text-3xl">
+          Our Sponsors
+        </h1>
+        <p className="text-center text-sm font-medium text-[#836666] lg:text-xl">
+          These incredible companies help bring DeltaHacks to life, uniting to
+          support hundreds of students during this weekend...
+        </p>
+      </div>
       <div className="mx-auto flex max-w-95 flex-col lg:max-w-200">
         <div className="flex flex-wrap justify-center lg:gap-x-15">
           {generateSponsorBoxes(sponsorsInfoLarge)}

@@ -1,6 +1,9 @@
 import Hero from "~/sections/Hero";
 import { posthogServerClient } from "~/lib/posthog";
-import AboutUs from "~/sections/AboutUs";
+import FAQ from "~/sections/FAQ";
+import Speakers from "~/sections/Speakers";
+import Sponsors from "~/sections/Sponsors";
+import About from "~/sections/AboutUs";
 import ReachOutToUs from "~/sections/ReachOutToUs";
 
 export const revalidate = 60;
@@ -8,6 +11,11 @@ export const revalidate = 60;
 export default async function HomePage() {
   return (
     <>
+      <Hero />
+      <About />
+      <Speakers />
+      <Sponsors />
+      <FAQ />
       <ReachOutToUs />
     </>
   );
