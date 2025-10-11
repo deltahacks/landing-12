@@ -17,10 +17,10 @@ const Footer: React.FC = () => {
               style={{ objectFit: "contain" }}
             />
             <div className="flex w-full flex-col gap-3 xl:max-w-sm">
-              <h1 className="font-darumdrop text-4xl text-dh-brown">
+              <h1 className="font-darumdrop text-dh-brown text-4xl">
                 Still have questions?
               </h1>
-              <p className="font-fredoka text-sm text-dh-brown">
+              <p className="font-fredoka text-dh-brown text-sm">
                 Reach out to us at{" "}
                 <a href="mailto:hello@deltahacks.com">hello@deltahacks.com</a>,
                 any socials, or subscribe to our newsletter for more updates!
@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form"
-                className="flex h-13 w-full items-center justify-between gap-4 rounded-2xl border-3 border-white bg-dh-beige p-3 text-dh-newletter-brown drop-shadow-sm"
-                target="_self"  
+                className="bg-dh-beige text-dh-newletter-brown flex h-13 w-full items-center justify-between gap-4 rounded-2xl border-3 border-white p-3 drop-shadow-sm"
+                target="_self"
                 noValidate
               >
                 <div className="flex w-full items-center gap-4">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                   <input
                     type="email"
                     name="EMAIL"
-                    className="flex-1 text-sm text-dh-brown outline-none placeholder:text-dh-newletter-brown"
+                    className="text-dh-brown placeholder:text-dh-newletter-brown flex-1 text-sm outline-none"
                     placeholder="Sign up for our newsletter"
                     id="mce-EMAIL"
                     required={true}
@@ -58,7 +58,10 @@ const Footer: React.FC = () => {
                     id="mce-success-response"
                   ></div>
                 </div>
-                <div aria-hidden="true" className="absolute opacity-0 pointer-events-none -z-10">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -z-10 opacity-0"
+                >
                   <input
                     type="text"
                     name="b_7ac221f02edc4242db4789d8f_380c22c749"
@@ -66,9 +69,9 @@ const Footer: React.FC = () => {
                   />
                 </div>
                 <div className="relative min-h-7 min-w-12">
-                  <div className="absolute inset-0 h-full w-full rounded-md bg-dh-mauve" />
+                  <div className="bg-dh-mauve absolute inset-0 h-full w-full rounded-md" />
                   <button
-                    className="absolute -top-0.5 left-0.5 flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-white text-dh-mauve transition-all duration-100 active:top-0 active:left-0 active:border active:border-dh-mauve"
+                    className="text-dh-mauve active:border-dh-mauve absolute -top-0.5 left-0.5 flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-white transition-all duration-100 active:top-0 active:left-0 active:border"
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
@@ -96,31 +99,31 @@ const Footer: React.FC = () => {
       <div className="h-14 xl:h-5" />
       <footer className="flex w-full justify-center">
         <div className="flex max-w-360 min-w-0 flex-col justify-center pb-20 md:px-40">
-          <p className="font-fredoka m-0 p-0 text-center text-sm text-dh-brown">
+          <p className="font-fredoka text-dh-brown m-0 p-0 text-center text-sm">
             Made with 🩷 from the DeltaHacks Team
           </p>
           <TeamCarousel />
           <div className="flex flex-col gap-4 px-4">
-            <div className="w-full border-t border-dashed border-dh-brown lg:border-solid" />
+            <div className="border-dh-brown w-full border-t border-dashed lg:border-solid" />
             <div className="flex flex-col justify-between gap-4 xl:flex-row">
               <div className="font-fredoka flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
                 <a
                   href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
-                  className="text-xs text-dh-brown hover:underline"
+                  className="text-dh-brown text-xs hover:underline"
                 >
                   Code of Conduct
                 </a>
                 <a
                   href="https://mlh.io/privacy"
-                  className="text-xs text-dh-brown hover:underline"
+                  className="text-dh-brown text-xs hover:underline"
                 >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-xs text-dh-brown hover:underline">
+                <a href="#" className="text-dh-brown text-xs hover:underline">
                   Travel Guidelines
                 </a>
               </div>
-              <p className="text-center text-sm text-dh-brown">
+              <p className="text-dh-brown text-center text-sm">
                 © Copyright {new Date().getFullYear()} DeltaHacks
               </p>
             </div>
