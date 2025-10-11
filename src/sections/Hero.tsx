@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import hero from "~/components/svgs/Hero.png";
+import hero from "~/components/assets/Hero.png";
 import { posthogServerClient } from "~/lib/posthog";
+import Navbar from "~/components/Navbar";
 
 const Hero: React.FC = async () => {
   const applicationsOpen = await posthogServerClient.isFeatureEnabled(
@@ -12,6 +13,7 @@ const Hero: React.FC = async () => {
 
   return (
     <main className="grid h-[80vh] grid-cols-1 grid-rows-1 bg-gradient-to-b from-[#182B8C] to-[#B2ACEA] md:h-screen">
+      <Navbar />
       <div className="col-start-1 col-end-1 row-start-1 row-end-1 flex items-end">
         <Image
           src={hero}
