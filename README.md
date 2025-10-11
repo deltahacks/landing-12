@@ -1,6 +1,6 @@
 # Deltahacks 12 Landing Site
 
-DeltaHacks is an annual, 36-hour hackathon hosted at McMaster University. This is the official landing site for DeltaHacks 11, hosted in January 2025.
+DeltaHacks is an annual, 36-hour hackathon hosted at McMaster University. This is the official landing site for DeltaHacks 11, hosted in January 2026.
 
 ## Built with
 
