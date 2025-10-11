@@ -78,6 +78,6 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What's happening January 10th?",
     answer:
-      "Our IN PERSON Hackathon event days are January 11th-12th. Friday, January 10 will consist of VIRTUAL Pre Hackathon Events to get you prepped and excited for the main hackathon!",
+      "Our IN PERSON Hackathon event days are January 10th-11th. Friday, January 10 will consist of VIRTUAL Pre Hackathon Events to get you prepped and excited for the main hackathon!",
   },
 ];
