@@ -4,7 +4,7 @@ import FAQ from "~/sections/FAQ";
 import Speakers from "~/sections/Speakers";
 import Sponsors from "~/sections/Sponsors";
 import About from "~/sections/AboutUs";
-import ReachOutToUs from "~/sections/ReachOutToUs";
+import Footer from "~/sections/Footer";
 
 export const revalidate = 60;
 
@@ -16,7 +16,7 @@ export default async function HomePage() {
       <Speakers />
       <Sponsors />
       <FAQ />
-      <ReachOutToUs />
+      <Footer />
     </>
   );
 }
