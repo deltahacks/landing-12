@@ -123,7 +123,9 @@ const Sponsors: React.FC = () => {
           {generateSponsorBoxes(sponsorsInfoSmall)}
         </div>
       </div>
-      <Trolley className="top-0 mx-auto -mt-52.5 -ml-2 h-fit w-85 lg:-mt-149 lg:-ml-16 lg:w-240" />
+      <div className="top-0 mx-auto -mt-52.5 -ml-2 h-fit w-85 lg:-mt-149 lg:-ml-16 lg:w-240">
+        <Trolley className="h-full w-full" />
+      </div>
     </div>
   );
 };
