@@ -13,7 +13,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
 }) => {
   return (
-    <div className="w-screen md:relative md:-mb-64">
+    <div id="about" className="w-screen md:relative md:-mb-64">
       <div
         className={clsx(
           "w-screen md:absolute md:top-0 md:flex md:items-center md:justify-center xl:top-48",
@@ -54,6 +54,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           </div>
         </div>
       </div>
+      <div id="statistics" className="absolute bottom-1/2"></div>
       <div className="hidden md:block">
         <Image
           src={statsImg}
@@ -65,7 +66,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           className="w-full object-contain"
         />
       </div>
-      <div className="-mb-20 md:m-0 md:hidden">
+      <div id="statistics" className="-mb-20 md:m-0 md:hidden">
         <Image
           src={statsMobileImg}
           placeholder="blur"
@@ -76,7 +77,9 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           className="w-full object-contain"
         />
       </div>
+      
     </div>
+    
   );
 };
 
