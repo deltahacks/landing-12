@@ -26,7 +26,7 @@ const Hero: React.FC = async () => {
         />
       </div>
 
-      <div className="col-start-1 col-end-1 row-start-1 row-end-1 px-4 py-32 md:py-24 text-center text-white md:px-24 md:text-left">
+      <div className="col-start-1 col-end-1 row-start-1 row-end-1 px-4 py-32 text-center text-white md:px-24 md:py-24 md:text-left">
         <div className="flex w-full items-center justify-center gap-2 text-xs md:justify-start md:text-2xl">
           <p>Jan 10 - 11, 2026</p>•<p>Official Event @ McMaster University</p>
         </div>

@@ -77,9 +77,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           className="w-full object-contain"
         />
       </div>
-      
     </div>
-    
   );
 };
 

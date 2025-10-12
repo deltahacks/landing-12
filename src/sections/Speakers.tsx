@@ -5,7 +5,10 @@ import speakersInfo from "~/data/speakersData";
 const Speakers: React.FC = () => {
   return (
     <SpeakerBackground>
-      <h1 id="speakers" className="font-darumdrop text-2xl font-bold text-white md:text-4xl">
+      <h1
+        id="speakers"
+        className="font-darumdrop text-2xl font-bold text-white md:text-4xl"
+      >
         Engage with{" "}
         <span className="bg-linear-to-tr from-[#FFB942] to-[#FCFCFC] bg-clip-text text-transparent">
           industry
