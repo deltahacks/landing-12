@@ -4,10 +4,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useState } from "react";
 import CarouselItem from "~/components/CarouselItem";
 import AutoScroll from "embla-carousel-auto-scroll";
-import members from "~/assets/footer/members.json";
+import members from "~/data/teamMembersData";
 
 export default function Carousel() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
+  console.log(members.length);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -49,11 +51,7 @@ export default function Carousel() {
                 onMouseLeave={handleImageInactive}
               >
                 <CarouselItem
-                  src={
-                    member.fileName
-                      ? `/memberPictures/${member.fileName}`
-                      : "/memberPictures/placeholder.png"
-                  }
+                  src={`/memberPictures/${member.fileName}`}
                   fullName={member.fullName ?? ""}
                   index={idx}
                   isActive={hoveredIdx === idx}
