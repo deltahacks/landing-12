@@ -9,7 +9,7 @@ const SpeakerBackground = ({ children }: { children: ReactNode }) => {
         viewBox="0 0 1440 164"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-auto w-full translate-y-5 transform "
+        className="h-auto w-full translate-y-5 transform"
       >
         <g filter="url(#a)">
           <path
