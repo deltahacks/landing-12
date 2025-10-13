@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
                         Statistics
                       </Link>
                       <Link href="#speakers" onClick={hideSidebar}>
-                        Past Events
+                        Speakers
                       </Link>
                       <Link href="#sponsors" onClick={hideSidebar}>
                         Sponsors
