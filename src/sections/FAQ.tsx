@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="relative my-8 w-full py-16 md:my-12 md:py-20">
+    <div id="faq" className="relative my-8 w-full py-16 md:my-12 md:py-20">
       <div className="flex items-center justify-center px-6 md:px-16">
         <div className="relative">
           <div className="block md:hidden">
