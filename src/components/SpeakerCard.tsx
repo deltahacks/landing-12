@@ -6,10 +6,16 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
   name,
   description,
   imagePath,
+  url,
 }) => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="aspect-square overflow-hidden rounded-2xl bg-gray-300 shadow-lg transition-transform duration-300 hover:scale-110">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="aspect-square overflow-hidden rounded-2xl bg-gray-300 shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
+      >
         <Image
           src={imagePath}
           alt={name}
@@ -17,7 +23,7 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
           width={200}
           height={200}
         />
-      </div>
+      </a>
       <h2 className="text-center text-sm text-white md:text-2xl">{name}</h2>
       <p className="text-dh-grey px-5 text-center text-xs md:text-2xl">
         {description}

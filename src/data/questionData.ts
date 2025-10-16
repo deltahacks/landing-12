@@ -4,7 +4,7 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is a type of technical competition! Attendees work with new people on cool ideas and get the resources needed to bring them to life. We do not condone, nor allow, any hacking or illegal activities! DeltaHacks is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
+      "A hackathon is a type of technical competition! Attendees work with new people on cool ideas and get the resources needed to bring them to life. We do not condone, nor allow, any hacking or illegal activities! DeltaHacks 12 is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
   },
   {
     question: "What is DeltaHacks?",
@@ -76,8 +76,8 @@ export const faq_questions: QuestionType[] = [
       "Projects are judged by event sponsors and experts from the tech sector. Projects are presented to judges at the exposition and evaluated on multiple factors such as presentation, creativity, practical application, and originality.",
   },
   {
-    question: "What's happening January 10th?",
+    question: "What's happening January 9th?",
     answer:
-      "Our IN PERSON Hackathon event days are January 10th-11th. Friday, January 10 will consist of VIRTUAL Pre Hackathon Events to get you prepped and excited for the main hackathon!",
+      "Our IN PERSON Hackathon event days are January 10th-11th. Friday, January 9 will consist of VIRTUAL Pre Hackathon Events to get you prepped and excited for the main hackathon!",
   },
 ];
