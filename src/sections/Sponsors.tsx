@@ -105,7 +105,7 @@ const Sponsors: React.FC = () => {
     <div className="mx-auto w-fit">
       <div className="mx-auto mb-8 max-w-95 px-5 lg:max-w-200">
         <h1 className="font-darumdrop mb-2.5 text-center text-6xl text-[#836666] lg:mb-2.5 lg:text-3xl">
-          Our Sponsors
+          Past Sponsors
         </h1>
         <p className="text-center text-sm font-medium text-[#836666] lg:text-xl">
           These incredible companies help bring DeltaHacks to life, uniting to
