@@ -20,7 +20,7 @@ const aboutUsInfo: AboutUsInfoType[] = [
   {
     title: "Build for Change",
     description:
-      "DeltaHacks is an annual 24-hour hackathon empowering 500+ students across North America to build impactful projects that spark positive change.",
+      "DeltaHacks is an annual 24-hour hackathon empowering 600+ students across North America to build impactful projects that spark positive change.",
     icon: <Lemon className="-mr-10 h-auto w-40 md:-mr-0 md:w-32" />,
   },
   {

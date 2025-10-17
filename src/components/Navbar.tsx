@@ -85,9 +85,6 @@ const Navbar: React.FC = () => {
           <Link href="https://www.instagram.com/deltahacks" target="_blank">
             <NavInsta width={30} height={30} />
           </Link>
-          <Link href="https://deltahacks-xi.devpost.com/" target="_blank">
-            <NavDevpost width={30} height={30} />
-          </Link>
           <Link href="https://www.tiktok.com/@deltahacks" target="_blank">
             <NavTiktok width={30} height={30} />
           </Link>
@@ -162,12 +159,6 @@ const Navbar: React.FC = () => {
                       </Link>
                       <Link href="https://www.linkedin.com/company/deltahacks/mycompany/">
                         <NavLinkedin width={48} height={48} />
-                      </Link>
-                      <Link
-                        href="https://deltahacks-xi.devpost.com/"
-                        target="_blank"
-                      >
-                        <NavDevpost width={48} height={48} />
                       </Link>
                       <Link href="https://www.tiktok.com/@deltahacks">
                         <NavTiktok width={48} height={48} />

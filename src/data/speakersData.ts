@@ -3,32 +3,37 @@ export type SpeakerInfoType = {
   description: string;
   imagePath: string;
   id: number;
+  url: string;
 };
 
 const speakersInfo: SpeakerInfoType[] = [
   {
     id: 1,
     name: "Theo Browne",
-    description: "Youtuber & CEO of t3.chat",
+    description: "Streamer & CEO of t3.chat",
     imagePath: "/assets/speakers/theo.jpg",
+    url: "https://www.twitch.tv/theo",
   },
   {
     id: 2,
     name: "Ivan Zhang",
     description: "Co-Founder of Cohere",
     imagePath: "/assets/speakers/ivan.jpg",
+    url: "https://www.linkedin.com/in/1vnzh",
   },
   {
     id: 3,
     name: "Tanmay Bakshi",
     description: "Senior Engineer at IBM",
     imagePath: "/assets/speakers/tanmay.jpg",
+    url: "https://www.linkedin.com/in/tanmayb123",
   },
   {
     id: 4,
     name: "Chris Bautista (TrashDev)",
     description: "Streamer & Senior Netflix Engineer",
     imagePath: "/assets/speakers/trash.jpg",
+    url: "https://www.twitch.tv/trash_dev",
   },
 ];
 

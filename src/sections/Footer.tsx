@@ -99,31 +99,28 @@ const Footer: React.FC = () => {
       <div className="h-14 xl:h-5" />
       <footer className="flex w-full justify-center">
         <div className="flex max-w-360 min-w-0 flex-col justify-center pb-20 md:px-40">
-          <p className="font-fredoka text-dh-brown m-0 p-0 text-center text-sm">
-            Made with 🩷 from the DeltaHacks Team
-          </p>
           <TeamCarousel />
           <div className="flex flex-col gap-4 px-4">
             <div className="border-dh-brown w-full border-t border-dashed lg:border-solid" />
             <div className="flex flex-col justify-between gap-4 xl:flex-row">
-              <div className="font-fredoka flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
+              <div className="font-fredoka flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0 [&>*]:text-sm [&>*]:md:text-lg">
                 <a
                   href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
-                  className="text-dh-brown text-xs hover:underline"
+                  className="text-dh-brown hover:underline"
                 >
                   Code of Conduct
                 </a>
                 <a
                   href="https://mlh.io/privacy"
-                  className="text-dh-brown text-xs hover:underline"
+                  className="text-dh-brown hover:underline"
                 >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-dh-brown text-xs hover:underline">
+                <a href="#" className="text-dh-brown hover:underline">
                   Travel Guidelines
                 </a>
               </div>
-              <p className="text-dh-brown text-center text-sm">
+              <p className="text-dh-brown text-center text-sm md:text-lg">
                 © Copyright {new Date().getFullYear()} DeltaHacks
               </p>
             </div>

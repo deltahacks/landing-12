@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Question from "~/components/Question";
 import { faq_questions } from "~/data/questionData";
+import { FAQShelfDesktop, FAQShelfMobile } from "~/components/svgs/FAQShelf";
 
 const FAQ: React.FC = () => {
   const [openLeftColumnIndex, setOpenLeftColumnIndex] = useState<number | null>(
@@ -40,31 +41,17 @@ const FAQ: React.FC = () => {
       <div className="flex items-center justify-center px-6 md:px-16">
         <div className="relative">
           <div className="block md:hidden">
-            <Image
-              src="/FAQ-mobile.svg"
-              alt="FAQ Background Mobile"
-              width={390}
-              height={780}
-              className="object-contain"
-              priority
-            />
+            <FAQShelfMobile />
           </div>
           <div className="hidden md:block">
-            <Image
-              src="/FAQ.svg"
-              alt="FAQ Background"
-              width={1200}
-              height={800}
-              className="h-auto w-[88vw] max-w-6xl min-w-2xl object-contain lg:w-[88vw]"
-              priority
-            />
+            <FAQShelfDesktop />
           </div>
 
           <div className="absolute inset-0 mt-16 flex items-center justify-center md:mt-20">
-            <div className="mx-auto w-72 overflow-hidden rounded-2xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-md md:w-[45vw] md:max-w-xl md:min-w-2xl lg:w-[70vw] lg:max-w-5xl">
+            <div className="h-215 w-87 overflow-hidden rounded-2xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-md md:h-130 md:w-250 md:-translate-y-13 md:transform">
               <div className="p-1 lg:p-3">
-                <div className="flex flex-col gap-0 md:flex-row lg:gap-4">
-                  <div className="flex flex-1 flex-col gap-0.5 lg:gap-1">
+                <div className="flex flex-col md:flex-row md:gap-0 lg:gap-4">
+                  <div className="flex flex-1 flex-col gap-4 md:gap-0.5 lg:gap-1">
                     {leftColumnQuestions.map(({ question, answer }, index) => (
                       <Question
                         question={question}
@@ -79,7 +66,7 @@ const FAQ: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="flex flex-1 flex-col gap-0.5 lg:gap-1">
+                  <div className="flex flex-1 flex-col gap-4 md:gap-0.5 lg:gap-1">
                     {rightColumnQuestions.map(({ question, answer }, index) => {
                       const globalIndex = midpoint + index;
                       return (
