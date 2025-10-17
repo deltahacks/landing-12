@@ -14,7 +14,7 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="aspect-square overflow-hidden rounded-2xl bg-gray-300 shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
+        className="aspect-square cursor-pointer overflow-hidden rounded-2xl bg-gray-300 shadow-lg transition-transform duration-300 hover:scale-110"
       >
         <Image
           src={imagePath}

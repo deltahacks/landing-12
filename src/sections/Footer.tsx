@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-4 px-4">
             <div className="border-dh-brown w-full border-t border-dashed lg:border-solid" />
             <div className="flex flex-col justify-between gap-4 xl:flex-row">
-              <div className="font-fredoka [&>*]:text-sm [&>*]:md:text-lg flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0">
+              <div className="font-fredoka flex w-full justify-between gap-10 px-5 xl:w-auto xl:px-0 [&>*]:text-sm [&>*]:md:text-lg">
                 <a
                   href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
                   className="text-dh-brown hover:underline"
