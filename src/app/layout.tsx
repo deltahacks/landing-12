@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none`}
+      className={`${darumadropOne.variable} ${fredoka.variable} overscroll-none scroll-smooth`}
     >
       <body className="bg-background overscroll-none">
         <PostHogProvider>{children}</PostHogProvider>

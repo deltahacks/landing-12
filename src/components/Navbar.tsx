@@ -68,11 +68,11 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <div className="font-display md:text-md hidden w-fit items-center justify-between text-white md:flex md:gap-4 md:px-6 md:text-sm lg:gap-6 lg:px-12 lg:pl-2 lg:text-lg xl:gap-12">
-            <Link href="#TBA">About</Link>
-            <Link href="#TBA">Statistics</Link>
-            <Link href="#TBA">Past Events</Link>
-            <Link href="#TBA">Sponsors</Link>
-            <Link href="#FAQ">FAQ</Link>
+            <Link href="#about">About</Link>
+            <Link href="#statistics">Statistics</Link>
+            <Link href="#speakers">Speakers</Link>
+            <Link href="#sponsors">Sponsors</Link>
+            <Link href="#faq">FAQ</Link>
           </div>
         </div>
         <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-30">
@@ -137,19 +137,19 @@ const Navbar: React.FC = () => {
                 <div className="drawer-side font-display h-[calc(100dvh)] w-screen overscroll-none bg-gradient-to-b from-[#1B2E8E] to-[#5462B2]">
                   <div className="z-50 flex h-full flex-col justify-between px-16">
                     <div className="z-50 flex w-fit flex-col gap-8 pt-28 text-xl text-white">
-                      <Link href="#TBA" onClick={hideSidebar}>
+                      <Link href="#about" onClick={hideSidebar}>
                         About
                       </Link>
-                      <Link href="#TBA" onClick={hideSidebar}>
+                      <Link href="#statistics" onClick={hideSidebar}>
                         Statistics
                       </Link>
-                      <Link href="#TBA" onClick={hideSidebar}>
-                        Past Events
+                      <Link href="#speakers" onClick={hideSidebar}>
+                        Speakers
                       </Link>
-                      <Link href="#TBA" onClick={hideSidebar}>
+                      <Link href="#sponsors" onClick={hideSidebar}>
                         Sponsors
                       </Link>
-                      <Link href="#TBA" onClick={hideSidebar}>
+                      <Link href="#faq" onClick={hideSidebar}>
                         FAQ
                       </Link>
                     </div>
