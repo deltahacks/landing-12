@@ -20,6 +20,7 @@ const SpeakerCard: React.FC<SpeakerInfoType> = ({
           src={imagePath}
           alt={name}
           className="h-full w-full object-cover"
+          unoptimized={true}
           width={200}
           height={200}
         />
