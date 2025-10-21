@@ -7,7 +7,7 @@ import type { EmblaCarouselType } from "embla-carousel";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
 import { cn } from "~/lib/utils";
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from "embla-carousel-autoplay";
 
 const components = [DH9, DH10, DH11] as const;
 
@@ -21,7 +21,14 @@ export default function GalleryItem({ index }: { index: number }) {
       watchDrag: false,
       active: true,
     },
-    [Autoplay({ playOnInit: true, delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false})],
+    [
+      Autoplay({
+        playOnInit: true,
+        delay: 3000,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ],
   );
 
   const BackgroundComponent = components[index % components.length]!;
@@ -62,7 +69,7 @@ function DH9({
         alt="DH9"
         width={1000}
         height={1000}
-        className="absolute -top-38 -left-22 w-full h-full object-cover scale-[0.9]"
+        className="absolute -top-38 -left-22 h-full w-full scale-[0.9] object-cover"
       />
       <div
         ref={emblaRef}
@@ -78,15 +85,25 @@ function DH9({
                 alt={`DH9 ${i + 1}`}
                 width={1000}
                 height={1000}
-                className="w-[18.73rem] h-[17.66rem] object-cover"
+                className="h-[17.66rem] w-[18.73rem] object-cover"
               />
             </div>
           ))}
         </div>
-        <div className={cn("absolute top-1/2 -left-2 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 -left-2 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
-        <div className={cn("absolute top-1/2 right-0 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 right-0 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
@@ -124,7 +141,7 @@ function DH10({
         alt="DH10"
         width={1000}
         height={1000}
-        className="absolute -top-40 -left-[4.5rem] w-full h-full object-fill scale-[0.6]"
+        className="absolute -top-40 -left-[4.5rem] h-full w-full scale-[0.6] object-fill"
       />
       <div
         ref={emblaRef}
@@ -140,15 +157,25 @@ function DH10({
                 alt={`DH10 ${i + 1}`}
                 width={1000}
                 height={1000}
-                className="w-[18.73rem] h-[17.66rem] object-cover"
+                className="h-[17.66rem] w-[18.73rem] object-cover"
               />
             </div>
           ))}
         </div>
-        <div className={cn("absolute top-1/2 -left-2 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 -left-2 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
-        <div className={cn("absolute top-1/2 right-0 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 right-0 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
@@ -186,7 +213,7 @@ function DH11({
         alt="DH11"
         width={1000}
         height={1000}
-        className="absolute -top-42 -left-20 w-full h-full object-fill scale-[0.8]"
+        className="absolute -top-42 -left-20 h-full w-full scale-[0.8] object-fill"
       />
       <div
         ref={emblaRef}
@@ -202,15 +229,25 @@ function DH11({
                 alt={`DH11 ${i + 1}`}
                 width={1000}
                 height={1000}
-                className="w-[18.73rem] h-[17.66rem] object-cover"
+                className="h-[17.66rem] w-[18.73rem] object-cover"
               />
             </div>
           ))}
         </div>
-        <div className={cn("absolute top-1/2 -left-2 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 -left-2 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
-        <div className={cn("absolute top-1/2 right-0 z-10 -translate-y-2/12", isInside ? "opacity-75" : "opacity-0")}>
+        <div
+          className={cn(
+            "absolute top-1/2 right-0 z-10 -translate-y-2/12",
+            isInside ? "opacity-75" : "opacity-0",
+          )}
+        >
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>

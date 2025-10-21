@@ -10,7 +10,10 @@ export default function Gallery() {
       <div ref={emblaRef} className="relative z-10 -mx-0 w-full">
         <div className="flex touch-pan-x gap-7 lg:items-center lg:justify-center">
           {[0, 1, 2].map((_, i) => (
-            <div key={i} className="shrink-0 grow-0 basis-full lg:basis-1/4 flex items-center justify-center">
+            <div
+              key={i}
+              className="flex shrink-0 grow-0 basis-full items-center justify-center lg:basis-1/4"
+            >
               <GalleryItem index={i} />
             </div>
           ))}
