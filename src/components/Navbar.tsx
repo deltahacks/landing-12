@@ -123,6 +123,7 @@ const Navbar: React.FC = () => {
             <Drawer.Portal>
               <Drawer.Overlay className="fixed inset-0 bg-black/40" />
               <Drawer.Content
+                // added onCloseAutoFocus due to Vaul bug, https://github.com/emilkowalski/vaul/issues/569
                 onCloseAutoFocus={(e) => {
                   e.preventDefault();
                 }}
