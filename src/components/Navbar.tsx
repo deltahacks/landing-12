@@ -50,11 +50,11 @@ const Navbar: React.FC = () => {
   }, [lastScrollY]);
 
   return (
-    <div className="absolute top-0 flex w-full items-center justify-center">
+    <div className="sticky top-0 z-30 flex w-full items-center justify-center">
       <div
         className={clsx(
           "font-display sticky top-0 z-30 flex w-full items-center justify-between gap-4 bg-[#19333A40] px-6 py-2 backdrop-blur-md transition-all duration-300 ease-in-out md:top-auto md:mt-6 md:w-11/12 md:rounded-4xl md:px-8 md:py-2",
-          !isNavVisible && "-translate-y-[120%] md:translate-y-0",
+          !isNavVisible && "-translate-y-[240%] md:translate-y-0",
         )}
       >
         <div className="flex h-full lg:gap-6 xl:gap-14">
@@ -122,7 +122,13 @@ const Navbar: React.FC = () => {
             </Link>
             <Drawer.Portal>
               <Drawer.Overlay className="fixed inset-0 bg-black/40" />
-              <Drawer.Content className="fixed right-0 bottom-0 z-50 mt-24 flex h-full w-full flex-col rounded-t-[10px]">
+              <Drawer.Content
+                // added onCloseAutoFocus due to Vaul bug, https://github.com/emilkowalski/vaul/issues/569
+                onCloseAutoFocus={(e) => {
+                  e.preventDefault();
+                }}
+                className="fixed right-0 bottom-0 z-50 mt-24 flex h-full w-full flex-col rounded-t-[10px]"
+              >
                 <Drawer.Title className="sr-only">Navigation Menu</Drawer.Title>
                 <div className="absolute top-0 right-0 z-50 px-8 pt-6">
                   {open && (
