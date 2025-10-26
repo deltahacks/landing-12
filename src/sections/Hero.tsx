@@ -13,7 +13,9 @@ const Hero: React.FC = async () => {
 
   return (
     <main className="grid h-[80vh] grid-cols-1 grid-rows-1 bg-gradient-to-b from-[#182B8C] to-[#B2ACEA] md:h-screen">
-      <Navbar />
+      <div className="fixed top-0 z-40 w-full">
+        <Navbar />
+      </div>
       <div className="col-start-1 col-end-1 row-start-1 row-end-1 flex items-end">
         <Image
           src={hero}
