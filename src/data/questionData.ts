@@ -43,7 +43,7 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What do I need to participate?",
     answer:
-      "DeltaHacks 11 will be in person. Bring in your laptop, reusable water bottle, and prepare to build some amazing projects!",
+      "DeltaHacks 12 will be in person. Bring in your laptop, reusable water bottle, and prepare to build some amazing projects!",
   },
   {
     question: "Will hardware be provided?",
