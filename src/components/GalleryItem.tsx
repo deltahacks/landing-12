@@ -63,7 +63,7 @@ function DH9({
   }, []);
 
   return (
-    <div className="relative overflow-hidden rounded-4xl bg-[#D69E66] px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
+    <div className="relative overflow-hidden rounded-4xl bg-dh-orange px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
       <Image
         src="/galleryPics/Headers/dh9.svg"
         alt="DH9"
@@ -135,7 +135,7 @@ function DH10({
   }, []);
 
   return (
-    <div className="relative rounded-4xl bg-[#D69E66] px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
+    <div className="relative rounded-4xl bg-dh-orange px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
       <Image
         src="/galleryPics/Headers/dh10.svg"
         alt="DH10"
@@ -207,7 +207,7 @@ function DH11({
   }, []);
 
   return (
-    <div className="relative rounded-4xl bg-[#D69E66] px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
+    <div className="relative rounded-4xl bg-dh-orange px-6 pt-28 pb-9 shadow-[0_3.6px_3.6px_0_rgba(0,0,0,0.25)]">
       <Image
         src="/galleryPics/Headers/dh11.svg"
         alt="DH11"
