@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Question from "~/components/Question";
 import { faq_questions } from "~/data/questionData";
 import { FAQShelfDesktop, FAQShelfMobile } from "~/components/svgs/FAQShelf";
@@ -39,14 +38,13 @@ const FAQ: React.FC = () => {
   return (
     <div id="faq" className="relative my-8 w-full py-16 md:my-12 md:py-20">
       <div className="flex items-center justify-center px-6 md:px-16">
-        <div className="relative">
+        <div className="relative w-full max-w-[52rem]">
           <div className="block md:hidden">
             <FAQShelfMobile />
           </div>
           <div className="hidden md:block">
             <FAQShelfDesktop />
           </div>
-
           <div className="absolute inset-0 mt-16 flex items-center justify-center md:mt-20">
             <div className="h-215 w-87 overflow-hidden rounded-2xl border border-white/30 bg-white/10 shadow-2xl backdrop-blur-md md:h-130 md:w-250 md:-translate-y-13 md:transform">
               <div className="p-1 lg:p-3">
