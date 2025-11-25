@@ -17,10 +17,10 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   const isMobile = useMediaQuery("(max-width: 767px)");
   return (
-    <div id="about" className="w-screen md:relative md:-mb-64">
+    <div id="about" className="w-full md:relative md:-mb-64">
       <div
         className={clsx(
-          "w-screen md:absolute md:top-0 md:flex md:items-center md:justify-center xl:top-48",
+          "w-full md:absolute md:top-0 md:flex md:items-center md:justify-center xl:top-48",
           className,
         )}
       >
