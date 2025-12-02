@@ -544,7 +544,7 @@ const FAQShelfMobile: React.FC<SVGProps<SVGSVGElement>> = (props) => {
       fill="none"
       preserveAspectRatio="xMidYMid meet"
       style={{
-        transform: "scaleX(1.15) scaleY(1.27)",
+        transform: "scaleX(1.1) scaleY(1.27)",
         transformOrigin: "center",
       }}
       xmlns="http://www.w3.org/2000/svg"
