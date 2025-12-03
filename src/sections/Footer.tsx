@@ -116,9 +116,6 @@ const Footer: React.FC = () => {
                 >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-dh-brown hover:underline">
-                  Travel Guidelines
-                </a>
               </div>
               <p className="text-dh-brown text-center text-sm md:text-lg">
                 © Copyright {new Date().getFullYear()} DeltaHacks
