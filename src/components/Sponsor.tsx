@@ -67,7 +67,7 @@ const Sponsor: React.FC<SponsorData> = ({
             alt={`${alt} Sponsor Logo`}
             className="h-full w-full object-contain brightness-0 invert"
             quality={100}
-            unoptimized={src.endsWith('.png')}
+            unoptimized={src.endsWith(".png")}
           />
         </div>
       )}
