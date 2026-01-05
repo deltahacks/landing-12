@@ -8,13 +8,7 @@ export type SponsorInfoType = {
 };
 
 const sponsorsInfo: SponsorInfoType[] = [
-  // Tier 1
-  {
-    imagePath: "/assets/sponsors/mcmaster.svg",
-    name: "McMaster University",
-    link: "https://www.mcmaster.ca/",
-    size: "large",
-  },
+  // Gold Tier - Large
   {
     imagePath: "/assets/sponsors/mes.svg",
     name: "McMaster Engineering Society",
@@ -22,73 +16,69 @@ const sponsorsInfo: SponsorInfoType[] = [
     size: "large",
   },
   {
-    imagePath: "/assets/sponsors/reservepower.svg",
-    name: "Reserve Power",
-    link: "https://www.reservepower.ca/",
+    imagePath: "/assets/sponsors/mcmaster.svg",
+    name: "McMaster Engineering",
+    link: "https://www.eng.mcmaster.ca/",
     size: "large",
   },
 
-  // Tier 2
+  // Silver Tier - Medium
   {
-    imagePath: "/assets/sponsors/pg.svg",
-    name: "Procter & Gamble",
-    link: "https://us.pg.com/",
+    imagePath: "/assets/sponsors/tailscale.svg",
+    name: "Tailscale",
+    link: "https://tailscale.com/",
     size: "medium",
   },
+
+  // Bronze Tier - Small
   {
-    imagePath: "/assets/sponsors/cohere.svg",
-    name: "Cohere",
-    link: "https://cohere.ai/",
-    size: "medium",
-  },
-  {
-    imagePath: "/assets/sponsors/manulife.svg",
-    name: "Manulife",
-    link: "https://www.manulife.ca/",
-    size: "medium",
-  },
-  {
-    imagePath: "/assets/sponsors/amd.svg",
-    name: "AMD",
-    link: "https://www.amd.com/en.html",
-    size: "medium",
+    imagePath: "/assets/sponsors/accenture.svg",
+    name: "Accenture",
+    link: "https://www.accenture.com/",
+    size: "small",
   },
   {
     imagePath: "/assets/sponsors/jamesdyson.svg",
     name: "James Dyson Foundation",
     link: "https://www.jamesdysonaward.org/",
-    size: "medium",
+    size: "small",
   },
   {
-    imagePath: "/assets/sponsors/accenture.svg",
-    name: "Accenture",
-    link: "https://www.accenture.com/",
-    size: "medium",
+    imagePath: "/assets/sponsors/intuit.svg",
+    name: "Intuit",
+    link: "https://www.intuit.com/",
+    size: "small",
   },
   {
-    imagePath: "/assets/sponsors/cibc.svg",
-    name: "CIBC",
-    link: "https://www.cibc.com",
-    size: "medium",
+    imagePath: "/assets/sponsors/manulife.svg",
+    name: "Manulife",
+    link: "https://www.manulife.ca/",
+    size: "small",
   },
 
-  // Tier 3
+  // In-kind & Other Sponsors - Small
+  {
+    imagePath: "/assets/sponsors/vercel.svg",
+    name: "Vercel",
+    link: "https://vercel.com/",
+    size: "small",
+  },
   {
     imagePath: "/assets/sponsors/swift.svg",
     name: "Swift",
-    link: "https://developer.apple.com/swift/",
+    link: "https://www.swift.com/",
     size: "small",
   },
   {
-    imagePath: "/assets/sponsors/voiceflow.svg",
-    name: "Voiceflow",
-    link: "https://voiceflow.com/",
+    imagePath: "/assets/sponsors/moorcheh.png",
+    name: "Moorcheh",
+    link: "https://www.moorcheh.ai/",
     size: "small",
   },
   {
-    imagePath: "/assets/sponsors/verbwire.svg",
-    name: "Verbwire",
-    link: "https://verbwire.com/",
+    imagePath: "/assets/sponsors/figma-lockup.svg",
+    name: "Figma",
+    link: "https://www.figma.com/",
     size: "small",
   },
   {
@@ -104,58 +94,15 @@ const sponsorsInfo: SponsorInfoType[] = [
     size: "small",
   },
   {
-    imagePath: "/assets/sponsors/nordpass.svg",
-    name: "Nordpass",
-    link: "https://nordpass.com/",
+    imagePath: "/assets/sponsors/beeceptor.png",
+    name: "Beeceptor",
+    link: "https://beeceptor.com/",
     size: "small",
   },
   {
-    imagePath: "/assets/sponsors/incogni.svg",
-    name: "Incogni",
-    link: "https://incogni.com/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/saily.svg",
-    name: "Saily",
-    link: "https://saily.com/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/taskade.svg",
-    name: "Taskade",
-    link: "https://taskade.com/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/logsnag.svg",
-    name: "LogSnag",
-    link: "https://www.logsnag.com/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/balsamiq.svg",
-    name: "Balsamiq",
-    link: "https://balsamiq.com/",
-    size: "small",
-  },
-
-  {
-    imagePath: "/assets/sponsors/wolfram.svg",
-    name: "Wolfram",
-    link: "https://wolfram.com/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/perplexity.svg",
-    name: "Perplexity",
-    link: "https://www.perplexity.ai/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/warp.svg",
-    name: "Warp",
-    link: "https://warp.dev/",
+    imagePath: "/assets/sponsors/mongodb.png",
+    name: "MongoDB",
+    link: "https://www.mongodb.com/",
     size: "small",
   },
 ];
