@@ -26,7 +26,7 @@
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
-    "next": "^15.2.3",
+    "next": "15.2.8",
     "posthog-js": "^1.268.9",
     "posthog-node": "^5.9.2",
     "react": "^19.0.0",

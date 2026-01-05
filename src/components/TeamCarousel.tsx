@@ -9,8 +9,6 @@ import members from "~/data/teamMembersData";
 export default function Carousel() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
-  console.log(members.length);
-
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,

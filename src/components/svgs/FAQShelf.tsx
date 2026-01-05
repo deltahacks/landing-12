@@ -4,11 +4,14 @@ import type { SVGProps } from "react";
 const FAQShelfDesktop: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
-      width="1121"
-      height="739"
       viewBox="0 0 1121 739"
+      preserveAspectRatio="xMidYMid meet"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{
+        transform: "scaleX(1.09) scaleY(1.27)",
+        transformOrigin: "center",
+      }}
       {...props}
     >
       <g filter="url(#filter0_d_267_87)">
@@ -537,10 +540,13 @@ const FAQShelfDesktop: React.FC<SVGProps<SVGSVGElement>> = (props) => {
 const FAQShelfMobile: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
-      width="405"
-      height="1277"
       viewBox="0 0 405 1277"
       fill="none"
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        transform: "scaleX(1.1) scaleY(1.27)",
+        transformOrigin: "center",
+      }}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
