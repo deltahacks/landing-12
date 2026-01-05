@@ -64,6 +64,18 @@ const sponsorsInfo: SponsorInfoType[] = [
     size: "small",
   },
   {
+    imagePath: "/assets/sponsors/swift.svg",
+    name: "Swift",
+    link: "https://www.swift.com/",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/moorcheh.png",
+    name: "Moorcheh",
+    link: "https://www.moorcheh.ai/",
+    size: "small",
+  },
+  {
     imagePath: "/assets/sponsors/figma-lockup.svg",
     name: "Figma",
     link: "https://www.figma.com/",
