@@ -66,7 +66,7 @@ const sponsorsInfo: SponsorInfoType[] = [
   {
     imagePath: "/assets/sponsors/swift.svg",
     name: "Swift",
-    link: "https://www.swift.com/",
+    link: "https://developer.apple.com/swift-student-challenge/",
     size: "small",
   },
   {
