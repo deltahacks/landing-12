@@ -96,7 +96,7 @@ const sponsorsInfo: SponsorInfoType[] = [
   {
     imagePath: "/assets/sponsors/beeceptor.png",
     name: "Beeceptor",
-    link: "https://beeceptor.com/",
+    link: "https://beeceptor.com/?utm_source=hackathon&utm_campaign=MMU-DeltaHacks",
     size: "small",
   },
   {
