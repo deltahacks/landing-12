@@ -3,6 +3,7 @@ import type { SponsorVariantSizes } from "~/components/Sponsor";
 export type SponsorInfoType = {
   name: string;
   link?: string;
+  rel?: string;
   imagePath: string;
   size: SponsorVariantSizes;
 };
@@ -90,7 +91,38 @@ const sponsorsInfo: SponsorInfoType[] = [
   {
     imagePath: "/assets/sponsors/nordvpn.svg",
     name: "NordVPN",
-    link: "https://nordvpn.com/",
+    link: "https://nordvpn.com/hackathons",
+    rel: "sponsored",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/nordpass.svg",
+    name: "NordPass",
+    link: "https://nordpass.com/",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/incogni.svg",
+    name: "Incogni",
+    link: "https://incogni.com/",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/saily.svg",
+    name: "Saily",
+    link: "https://saily.com/",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/nexosai.png",
+    name: "nexos.ai",
+    link: "https://nexos.ai/",
+    size: "small",
+  },
+  {
+    imagePath: "/assets/sponsors/nordprotect.png",
+    name: "Nord Protect",
+    link: "https://nordprotect.com/",
     size: "small",
   },
   {

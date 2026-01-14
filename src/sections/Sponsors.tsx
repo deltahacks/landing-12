@@ -73,6 +73,7 @@ const Sponsors: React.FC = () => {
           src={sponsor.imagePath}
           alt={sponsor.name}
           link={sponsor.link}
+          rel={sponsor.rel}
           size={sponsor.size}
           className={calculateCustomMargin()}
         />
