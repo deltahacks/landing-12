@@ -40,6 +40,7 @@ export interface SponsorData {
   src?: string;
   alt?: string;
   link?: string;
+  rel?: string;
   size: SponsorVariantSizes;
   className?: string;
 }
@@ -48,6 +49,7 @@ const Sponsor: React.FC<SponsorData> = ({
   src,
   alt,
   link,
+  rel,
   size = "medium",
   className,
 }) => {
@@ -80,7 +82,7 @@ const Sponsor: React.FC<SponsorData> = ({
         {...containerProps}
         href={link}
         target="_blank"
-        rel="noopener noreferrer"
+        rel={rel ? `noopener noreferrer ${rel}` : "noopener noreferrer"}
       >
         {content}
       </Link>
