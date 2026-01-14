@@ -114,15 +114,9 @@ const sponsorsInfo: SponsorInfoType[] = [
     size: "small",
   },
   {
-    imagePath: "/assets/sponsors/nexosai.svg",
+    imagePath: "/assets/sponsors/nexosai.png",
     name: "nexos.ai",
     link: "https://nexos.ai/",
-    size: "small",
-  },
-  {
-    imagePath: "/assets/sponsors/nordprotect.svg",
-    name: "Nord Protect",
-    link: "https://nordprotect.com/",
     size: "small",
   },
   {
