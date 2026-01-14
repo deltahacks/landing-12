@@ -120,6 +120,12 @@ const sponsorsInfo: SponsorInfoType[] = [
     size: "small",
   },
   {
+    imagePath: "/assets/sponsors/nordprotect.png",
+    name: "Nord Protect",
+    link: "https://nordprotect.com/",
+    size: "small",
+  },
+  {
     imagePath: "/assets/sponsors/beeceptor.png",
     name: "Beeceptor",
     link: "https://beeceptor.com/",
