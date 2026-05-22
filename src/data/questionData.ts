@@ -4,7 +4,7 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What is a hackathon?",
     answer:
-      "A hackathon is a type of technical competition! Attendees work with new people on cool ideas and get the resources needed to bring them to life. We do not condone, nor allow, any hacking or illegal activities! DeltaHacks 12 is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
+      "A hackathon is a type of technical competition! Attendees work with new people on cool ideas and get the resources needed to bring them to life. We do not condone, nor allow, any hacking or illegal activities! DeltaHacks 13 is an official MLH event. The MLH code of conduct can be found here: http://mlh.io/code-of-conduct",
   },
   {
     question: "What is DeltaHacks?",
@@ -27,8 +27,8 @@ export const faq_questions: QuestionType[] = [
       "Absolutely nothing! All you need is a personal computer to bring along with you to the event!",
   },
   {
-    question: "Will DeltaHacks 12 be in person or virtual?",
-    answer: "DeltaHacks 12 will be taking place fully in person this year.",
+    question: "Will DeltaHacks 13 be in person or virtual?",
+    answer: "DeltaHacks 13 will be taking place fully in person this year.",
   },
   {
     question: "Will attendees still get awesome swag?",
@@ -43,7 +43,7 @@ export const faq_questions: QuestionType[] = [
   {
     question: "What do I need to participate?",
     answer:
-      "DeltaHacks 12 will be in person. Bring in your laptop, reusable water bottle, and prepare to build some amazing projects!",
+      "DeltaHacks 13 will be in person. Bring in your laptop, reusable water bottle, and prepare to build some amazing projects!",
   },
   {
     question: "Will hardware be provided?",

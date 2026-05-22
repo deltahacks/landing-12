@@ -35,7 +35,7 @@ const About: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 </h1>
                 <div className="text-dh-blue flex -translate-x-1 transform flex-row items-center justify-center gap-24 text-2xl font-semibold opacity-65 md:gap-40 md:text-4xl">
                   <h2>About</h2>
-                  <h2>DH12!</h2>
+                  <h2>DH13!</h2>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-4 md:gap-8">

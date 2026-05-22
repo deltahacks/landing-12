@@ -30,10 +30,10 @@ const Hero: React.FC = async () => {
 
       <div className="col-start-1 col-end-1 row-start-1 row-end-1 px-4 pt-32 text-center text-white md:px-12 md:pt-24 md:text-left lg:px-24 lg:pt-32">
         <div className="flex w-full items-center justify-center gap-2 text-xs md:justify-start md:text-lg lg:text-2xl">
-          <p>Jan 10 - 11, 2026</p>•<p>Official Event @ McMaster University</p>
+          <p>Jan 9 - 10, 2027</p>•<p>Official Event @ McMaster University</p>
         </div>
         <h1 className="font-darumdrop text-5xl leading-8 md:text-4xl lg:text-6xl lg:leading-16">
-          DeltaHacks 12
+          DeltaHacks 13
         </h1>
         <p className="font-fredoka py-3 text-xs md:text-lg lg:text-2xl">
           {"McMaster University's annual hackathon for change."}
@@ -41,7 +41,8 @@ const Hero: React.FC = async () => {
 
         {applicationsOpen && (
           <Link
-            href="https://portal.deltahacks.com"
+            // href="https://portal.deltahacks.com"
+            href="https://deltahacks.com/"
             className="inline-block rounded-full border-2 bg-[#2B2052] px-8 py-3 text-2xl shadow-lg"
           >
             Apply Now

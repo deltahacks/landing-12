@@ -30,9 +30,9 @@ const aboutUsInfo: AboutUsInfoType[] = [
     icon: <Apple className="-mr-10 h-auto w-40 md:-mr-0 md:w-32" />,
   },
   {
-    title: "DeltaHacks 12",
+    title: "DeltaHacks 13",
     description:
-      "Now in its 12th year, DeltaHacks 12 is our most ambitious event yet. Come build, explore, and innovate—we'll take care of the rest!",
+      "Now in its 13th year, DeltaHacks 13 is our most ambitious event yet. Come build, explore, and innovate—we'll take care of the rest!",
     icon: <Discount className="-mr-10 h-auto w-40 md:-mr-0 md:w-32" />,
   },
 ];

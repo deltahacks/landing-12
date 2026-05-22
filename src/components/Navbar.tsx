@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
             <Link href="#faq">FAQ</Link>
           </div>
         </div>
-        <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-30">
+        <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4">
           <Link
             href="https://www.linkedin.com/company/deltahacks"
             target="_blank"
@@ -88,14 +88,14 @@ const Navbar: React.FC = () => {
           <Link href="https://www.tiktok.com/@deltahacks" target="_blank">
             <NavTiktok width={30} height={30} />
           </Link>
-          <Link
+          {/* <Link
             id="mlh-trust-badge"
             className="absolute right-0 z-50 mt-10"
             href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
             target="_blank"
           >
             <NavMLHTrustBadge className="w-full" width={136} height={136} />
-          </Link>
+          </Link> */}
         </div>
         <div className="inset-0 z-40 md:invisible md:hidden">
           <Drawer.Root

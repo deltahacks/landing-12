@@ -5,16 +5,16 @@ import { Darumadrop_One, Fredoka } from "next/font/google";
 import { PostHogProvider } from "~/components/PostHogProvider";
 
 export const metadata: Metadata = {
-  title: "DeltaHacks 12",
+  title: "DeltaHacks 13",
   description:
     "McMaster University's largest student-run hackathon for change.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
-    title: "DeltaHacks 12",
+    title: "DeltaHacks 13",
     description:
       "McMaster University's largest student-run hackathon for change.",
     url: "https://deltahacks.com",
-    siteName: "DeltaHacks 12",
+    siteName: "DeltaHacks 13",
     images: [
       {
         url: "https://deltahacks.com/og.png",
