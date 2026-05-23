@@ -42,10 +42,10 @@ const Hero: React.FC = async () => {
         {applicationsOpen && (
           <Link
             // href="https://portal.deltahacks.com"
-            href="https://deltahacks.com/"
+            href="https://forms.gle/HT6ASsUM7tKdxi4P7"
             className="inline-block rounded-full border-2 bg-[#2B2052] px-8 py-3 text-2xl shadow-lg"
           >
-            Apply Now
+            Interest Form
           </Link>
         )}
       </div>
