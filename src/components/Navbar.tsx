@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
             <Link href="#faq">FAQ</Link>
           </div>
         </div>
-        <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4">
+        <div className="hidden sm:pr-0 md:flex md:items-center md:gap-4 md:pr-20 lg:pr-30">
           <Link
             href="https://www.linkedin.com/company/deltahacks"
             target="_blank"
@@ -88,14 +88,14 @@ const Navbar: React.FC = () => {
           <Link href="https://www.tiktok.com/@deltahacks" target="_blank">
             <NavTiktok width={30} height={30} />
           </Link>
-          {/* <Link
+          <Link
             id="mlh-trust-badge"
             className="absolute right-0 z-50 mt-10"
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=gray"
             target="_blank"
           >
             <NavMLHTrustBadge className="w-full" width={136} height={136} />
-          </Link> */}
+          </Link>
         </div>
         <div className="inset-0 z-40 md:invisible md:hidden">
           <Drawer.Root
@@ -115,7 +115,7 @@ const Navbar: React.FC = () => {
             <Link
               id="mlh-trust-badge"
               className="absolute top-0 right-5 z-50 block w-16 max-w-[100px] min-w-[60px]"
-              href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
+              href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=gray"
               target="_blank"
             >
               <NavMLHTrustBadge width={110} height={110} className="w-full" />
